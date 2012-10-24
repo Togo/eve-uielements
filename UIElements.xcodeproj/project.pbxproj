@@ -97,6 +97,7 @@
 		CDC8F2111638015E000E9006 /* ClickOnUIElementSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickOnUIElementSubject.m; sourceTree = "<group>"; };
 		CDC8F21416380323000E9006 /* LeftMouseClickedObserverTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMouseClickedObserverTests.h; sourceTree = "<group>"; };
 		CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMouseClickedObserverTests.m; sourceTree = "<group>"; };
+		CDC8F22216381BCB000E9006 /* NotificationObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationObserver.h; sourceTree = "<group>"; };
 		CDE8B47B1633080A0085E130 /* UIElements.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UIElements.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE8B47E1633080A0085E130 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDE8B4811633080A0085E130 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -174,6 +175,14 @@
 			name = Listener;
 			sourceTree = "<group>";
 		};
+		CDC8F22016381BB3000E9006 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8F22216381BCB000E9006 /* NotificationObserver.h */,
+			);
+			name = Observer;
+			sourceTree = "<group>";
+		};
 		CDE8B4701633080A0085E130 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +225,7 @@
 		CDE8B4841633080A0085E130 /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				CDC8F22016381BB3000E9006 /* Observer */,
 				CDC8F20E163800AA000E9006 /* Listener */,
 				CDC8F1CE163666DD000E9006 /* Application */,
 				CDC8F1CC1635D95C000E9006 /* Indexing */,
