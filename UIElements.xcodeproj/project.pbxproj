@@ -35,6 +35,9 @@
 		CDC8F1DC1636782D000E9006 /* MenuBarIndexing.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F1DA1636782D000E9006 /* MenuBarIndexing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F1DD1636782D000E9006 /* MenuBarIndexing.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F1DB1636782D000E9006 /* MenuBarIndexing.m */; };
 		CDC8F1FE1637E45E000E9006 /* MenuBarIndexingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F1FD1637E45D000E9006 /* MenuBarIndexingTests.m */; };
+		CDC8F2121638015E000E9006 /* ClickOnUIElementSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F2101638015E000E9006 /* ClickOnUIElementSubject.h */; };
+		CDC8F2131638015E000E9006 /* ClickOnUIElementSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F2111638015E000E9006 /* ClickOnUIElementSubject.m */; };
+		CDC8F21616380324000E9006 /* LeftMouseClickedObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */; };
 		CDE8B47F1633080A0085E130 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47E1633080A0085E130 /* Cocoa.framework */; };
 		CDE8B4911633080B0085E130 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B4901633080B0085E130 /* SenTestingKit.framework */; };
 		CDE8B4921633080B0085E130 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47E1633080A0085E130 /* Cocoa.framework */; };
@@ -88,6 +91,11 @@
 		CDC8F1DB1636782D000E9006 /* MenuBarIndexing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarIndexing.m; sourceTree = "<group>"; };
 		CDC8F1FC1637E45D000E9006 /* MenuBarIndexingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBarIndexingTests.h; sourceTree = "<group>"; };
 		CDC8F1FD1637E45D000E9006 /* MenuBarIndexingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarIndexingTests.m; sourceTree = "<group>"; };
+		CDC8F20F1638010A000E9006 /* ObservableSubject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObservableSubject.h; sourceTree = "<group>"; };
+		CDC8F2101638015E000E9006 /* ClickOnUIElementSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickOnUIElementSubject.h; sourceTree = "<group>"; };
+		CDC8F2111638015E000E9006 /* ClickOnUIElementSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickOnUIElementSubject.m; sourceTree = "<group>"; };
+		CDC8F21416380323000E9006 /* LeftMouseClickedObserverTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMouseClickedObserverTests.h; sourceTree = "<group>"; };
+		CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMouseClickedObserverTests.m; sourceTree = "<group>"; };
 		CDE8B47B1633080A0085E130 /* UIElements.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UIElements.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE8B47E1633080A0085E130 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDE8B4811633080A0085E130 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -155,6 +163,16 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
+		CDC8F20E163800AA000E9006 /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8F20F1638010A000E9006 /* ObservableSubject.h */,
+				CDC8F2101638015E000E9006 /* ClickOnUIElementSubject.h */,
+				CDC8F2111638015E000E9006 /* ClickOnUIElementSubject.m */,
+			);
+			name = Listener;
+			sourceTree = "<group>";
+		};
 		CDE8B4701633080A0085E130 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +215,7 @@
 		CDE8B4841633080A0085E130 /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				CDC8F20E163800AA000E9006 /* Listener */,
 				CDC8F1CE163666DD000E9006 /* Application */,
 				CDC8F1CC1635D95C000E9006 /* Indexing */,
 				CDE8B4BE1633D4D70085E130 /* UIElements */,
@@ -232,6 +251,8 @@
 				CDC8F1D41636679A000E9006 /* ApplicationClassTests.m */,
 				CDC8F1FC1637E45D000E9006 /* MenuBarIndexingTests.h */,
 				CDC8F1FD1637E45D000E9006 /* MenuBarIndexingTests.m */,
+				CDC8F21416380323000E9006 /* LeftMouseClickedObserverTests.h */,
+				CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */,
 				CDE8B4971633080B0085E130 /* Supporting Files */,
 			);
 			path = UIElementsTests;
@@ -310,6 +331,7 @@
 				CDC8F1D1163666F3000E9006 /* Application.h in Headers */,
 				CDC8F1D8163677E2000E9006 /* UIElementIndexing.h in Headers */,
 				CDC8F1DC1636782D000E9006 /* MenuBarIndexing.h in Headers */,
+				CDC8F2121638015E000E9006 /* ClickOnUIElementSubject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +447,7 @@
 				CDC8F1D2163666F3000E9006 /* Application.m in Sources */,
 				CDC8F1D9163677E2000E9006 /* UIElementIndexing.m in Sources */,
 				CDC8F1DD1636782D000E9006 /* MenuBarIndexing.m in Sources */,
+				CDC8F2131638015E000E9006 /* ClickOnUIElementSubject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +461,7 @@
 				CDE8B4D01633D8E00085E130 /* EVEIdentifierTests.m in Sources */,
 				CDC8F1D51636679A000E9006 /* ApplicationClassTests.m in Sources */,
 				CDC8F1FE1637E45E000E9006 /* MenuBarIndexingTests.m in Sources */,
+				CDC8F21616380324000E9006 /* LeftMouseClickedObserverTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
