@@ -35,9 +35,10 @@
 		CDC8F1DC1636782D000E9006 /* MenuBarIndexing.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F1DA1636782D000E9006 /* MenuBarIndexing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F1DD1636782D000E9006 /* MenuBarIndexing.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F1DB1636782D000E9006 /* MenuBarIndexing.m */; };
 		CDC8F1FE1637E45E000E9006 /* MenuBarIndexingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F1FD1637E45D000E9006 /* MenuBarIndexingTests.m */; };
-		CDC8F2121638015E000E9006 /* ClickOnUIElementSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F2101638015E000E9006 /* ClickOnUIElementSubject.h */; };
+		CDC8F2121638015E000E9006 /* ClickOnUIElementSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F2101638015E000E9006 /* ClickOnUIElementSubject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F2131638015E000E9006 /* ClickOnUIElementSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F2111638015E000E9006 /* ClickOnUIElementSubject.m */; };
 		CDC8F21616380324000E9006 /* LeftMouseClickedObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */; };
+		CDC8F21C16381AB1000E9006 /* ObservableSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F20F1638010A000E9006 /* ObservableSubject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDE8B47F1633080A0085E130 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47E1633080A0085E130 /* Cocoa.framework */; };
 		CDE8B4911633080B0085E130 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B4901633080B0085E130 /* SenTestingKit.framework */; };
 		CDE8B4921633080B0085E130 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47E1633080A0085E130 /* Cocoa.framework */; };
@@ -332,6 +333,7 @@
 				CDC8F1D8163677E2000E9006 /* UIElementIndexing.h in Headers */,
 				CDC8F1DC1636782D000E9006 /* MenuBarIndexing.h in Headers */,
 				CDC8F2121638015E000E9006 /* ClickOnUIElementSubject.h in Headers */,
+				CDC8F21C16381AB1000E9006 /* ObservableSubject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
