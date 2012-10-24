@@ -9,8 +9,6 @@
 #import "ClickOnUIElementSubject.h"
 #import "UIElementUtilities_org.h"
 
-NSString * const NSClickOnUIElementNotification = @"NSClickOnUIElementNotification";
-
 @implementation ClickOnUIElementSubject
 
 @synthesize  currentUIElement;
@@ -32,8 +30,7 @@ NSString * const NSClickOnUIElementNotification = @"NSClickOnUIElementNotificati
 }
 
 - (void) notifyObserver {
-  [[NSNotificationCenter defaultCenter]
-   postNotificationName:NSClickOnUIElementNotification object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ClickOnUIElementNotification object:self];
 }
 
 - (void) uiElementChanged {

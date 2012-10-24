@@ -39,6 +39,9 @@
 		CDC8F2131638015E000E9006 /* ClickOnUIElementSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F2111638015E000E9006 /* ClickOnUIElementSubject.m */; };
 		CDC8F21616380324000E9006 /* LeftMouseClickedObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */; };
 		CDC8F21C16381AB1000E9006 /* ObservableSubject.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F20F1638010A000E9006 /* ObservableSubject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC8F22616381CAD000E9006 /* NotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F22216381BCB000E9006 /* NotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC8F22E16383AF4000E9006 /* UIElementNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F22C16383AF4000E9006 /* UIElementNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC8F22F16383AF5000E9006 /* UIElementNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F22D16383AF4000E9006 /* UIElementNotifications.m */; };
 		CDE8B47F1633080A0085E130 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47E1633080A0085E130 /* Cocoa.framework */; };
 		CDE8B4911633080B0085E130 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B4901633080B0085E130 /* SenTestingKit.framework */; };
 		CDE8B4921633080B0085E130 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47E1633080A0085E130 /* Cocoa.framework */; };
@@ -98,6 +101,8 @@
 		CDC8F21416380323000E9006 /* LeftMouseClickedObserverTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMouseClickedObserverTests.h; sourceTree = "<group>"; };
 		CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMouseClickedObserverTests.m; sourceTree = "<group>"; };
 		CDC8F22216381BCB000E9006 /* NotificationObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationObserver.h; sourceTree = "<group>"; };
+		CDC8F22C16383AF4000E9006 /* UIElementNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementNotifications.h; sourceTree = "<group>"; };
+		CDC8F22D16383AF4000E9006 /* UIElementNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementNotifications.m; sourceTree = "<group>"; };
 		CDE8B47B1633080A0085E130 /* UIElements.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UIElements.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE8B47E1633080A0085E130 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDE8B4811633080A0085E130 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -178,9 +183,19 @@
 		CDC8F22016381BB3000E9006 /* Observer */ = {
 			isa = PBXGroup;
 			children = (
+				CDC8F22B16383ADB000E9006 /* Notifications */,
 				CDC8F22216381BCB000E9006 /* NotificationObserver.h */,
 			);
 			name = Observer;
+			sourceTree = "<group>";
+		};
+		CDC8F22B16383ADB000E9006 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8F22C16383AF4000E9006 /* UIElementNotifications.h */,
+				CDC8F22D16383AF4000E9006 /* UIElementNotifications.m */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		CDE8B4701633080A0085E130 = {
@@ -344,6 +359,8 @@
 				CDC8F1DC1636782D000E9006 /* MenuBarIndexing.h in Headers */,
 				CDC8F2121638015E000E9006 /* ClickOnUIElementSubject.h in Headers */,
 				CDC8F21C16381AB1000E9006 /* ObservableSubject.h in Headers */,
+				CDC8F22616381CAD000E9006 /* NotificationObserver.h in Headers */,
+				CDC8F22E16383AF4000E9006 /* UIElementNotifications.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +477,7 @@
 				CDC8F1D9163677E2000E9006 /* UIElementIndexing.m in Sources */,
 				CDC8F1DD1636782D000E9006 /* MenuBarIndexing.m in Sources */,
 				CDC8F2131638015E000E9006 /* ClickOnUIElementSubject.m in Sources */,
+				CDC8F22F16383AF5000E9006 /* UIElementNotifications.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

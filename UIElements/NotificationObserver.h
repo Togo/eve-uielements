@@ -10,8 +10,10 @@
 
 @protocol NotificationObserver <NSObject>
 
-- (void) update (id object);
-- (void) suscribeToNotificiation(NSString *notificationName);
-- (void) unsuscribeNotificiation(NSString *notificationName);
+@property (strong, nonatomic)  NSMutableDictionary *subscribedNotifications;
+
+- (void) update :(NSNotification *)notification;
+- (void) subscribeToNotificiation :(NSString*) notificationName;
+- (void) unsuscribeNotificiation :(NSString*) notificationName;
 
 @end

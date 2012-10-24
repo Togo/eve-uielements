@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "ObservableSubject.h"
 
-extern NSString * const NSClickOnUIElementNotification;
-
 @interface ClickOnUIElementSubject : NSObject <ObservableSubject> {
   AXUIElementRef          currentUIElement;
   AXUIElementRef			    systemWideElement;
