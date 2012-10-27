@@ -46,10 +46,8 @@
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
   self = [super init];
   
-
   self.owner = [[Application alloc] initWithElementReference:ref];
 
-  self.itemRef = ref;
   // kAXRoleAttribute
   NSString *attribute = [UIElementUtilities readkAXAttributeString:ref :kAXRoleAttribute];
   self.role = attribute ? attribute : @"";

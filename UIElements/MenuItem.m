@@ -12,8 +12,10 @@
 @implementation MenuItem
 
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
+  
   self = [super initWithUIElementRef:ref];
-  self.uiElementIdentifier = [[MenuItemIdentifier alloc] init];
+  self.uiElementIdentifier = [[MenuItemIdentifier alloc] createIdentifier:self];
+  
   return self;
 }
 

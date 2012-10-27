@@ -13,7 +13,7 @@
 
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
   self = [super initWithUIElementRef:ref];
-  self.uiElementIdentifier = [[TextFieldIdentifier alloc] init];
+  self.uiElementIdentifier = [[TextFieldIdentifier alloc] createIdentifier:self];
   
   return self;
 }

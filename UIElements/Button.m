@@ -13,8 +13,9 @@
 @implementation Button
 
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
+  
   self = [super initWithUIElementRef:ref];
-  self.uiElementIdentifier = [[ButtonIdentifier alloc] init];
+  self.uiElementIdentifier = [[ButtonIdentifier alloc] createIdentifier:self];
   
   return self;
 }

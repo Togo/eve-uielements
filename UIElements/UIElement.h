@@ -15,9 +15,10 @@
 @class EVEIdentifierCreator;
 
 @interface UIElement : NSObject {
-  EVEIdentifierCreator *uiElementIdentifier;
   EVEShortcut *shortcut;
   Application *owner;
+  
+  NSString *uiElementIdentifier;
   
   NSString *role;
   NSString *roleDescription;
@@ -32,9 +33,10 @@
 
 @property (strong, nonatomic) EVEShortcut *shortcut;
 @property (strong, nonatomic) Application *owner;
-@property (strong, nonatomic) EVEIdentifierCreator *uiElementIdentifier;
 
 @property (unsafe_unretained) AXUIElementRef itemRef;
+
+@property (strong, nonatomic) NSString *uiElementIdentifier;
 
 @property (strong, nonatomic) NSString *role;
 @property (strong, nonatomic) NSString *roleDescription;
