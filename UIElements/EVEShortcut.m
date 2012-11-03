@@ -35,16 +35,16 @@ const char * const virtualKeyNames[virtualKeysCount] = {
                             "kVK_ANSI_4",
                             "kVK_ANSI_6",
                             "kVK_ANSI_5",
-                            "kVK_ANSI_E0x18,",
+                            "kVK_ANSI_E,",
                             "kVK_ANSI_9 ",
                             "kVK_ANSI_7 ",
-                            "kVK_ANSI_Mi0x1B,",
+                            "kVK_ANSI_Mi,",
                             "kVK_ANSI_8  ",
                             "kVK_ANSI_0  ",
-                            "kVK_ANSI_Rig0x1E,",
+                            "kVK_ANSI_Rig,",
                             "kVK_ANSI_O   ",
                             "kVK_ANSI_U   ",
-                            "kVK_ANSI_Left0x21,",
+                            "kVK_ANSI_Left,",
                             "kVK_ANSI_I    ",
                             "kVK_ANSI_P    ",
                             "kVK_ANSI_L    ",
@@ -142,7 +142,10 @@ const char * const virtualKeyNames[virtualKeysCount] = {
   
   if(elementRef != NULL) {
     AXUIElementCopyAttributeValue(elementRef, (CFStringRef) kAXMenuItemCmdCharAttribute,  (CFTypeRef*) &cmdCharRef);
-    self.cmdChar = (__bridge NSString*) cmdCharRef;
+    if (cmdCharRef)
+      self.cmdChar = (__bridge NSString*) cmdCharRef;
+    else
+      self.cmdChar = @"";
     
     AXUIElementCopyAttributeValue(elementRef, (CFStringRef) kAXMenuItemCmdVirtualKeyAttribute, (CFTypeRef*) &cmdVirtualKeyRef);
     self.virtualKey = (__bridge NSNumber*) cmdVirtualKeyRef;
