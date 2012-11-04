@@ -10,7 +10,7 @@
 #import "NUllIdentifier.h"
 
 @implementation NullUIElement
-  
+  //test
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
     
     self = [super initWithUIElementRef:ref];
