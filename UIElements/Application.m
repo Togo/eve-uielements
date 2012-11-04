@@ -56,7 +56,10 @@
   NSString *bundlePath = [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:bundleIdentifier];
 	NSBundle *appBundle = [NSBundle bundleWithPath:bundlePath];
 	name = [appBundle objectForInfoDictionaryKey:(id)kCFBundleNameKey];
-  return name;
+  if (name)
+     return name;
+  else
+    return @"";
 }
 
 - (AXUIElementRef) getAppRef {

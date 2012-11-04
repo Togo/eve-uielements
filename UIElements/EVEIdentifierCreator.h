@@ -15,6 +15,7 @@
 
 - (BOOL) withDescription;
 - (BOOL) withHelp;
+- (BOOL) withAppName;
 - (BOOL) withTitle;
 - (BOOL) withSubrole;
 - (BOOL) withParentTitle;

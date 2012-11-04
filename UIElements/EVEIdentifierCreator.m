@@ -23,6 +23,10 @@
       [temp appendString:[element roleDescription]];
   }
   
+  if ([self withAppName]) {
+      [temp appendString:[[element owner] appName]];
+  }
+  
   if ([self withDescription]) {
     [temp appendString:[element elementDescription]];
   }
@@ -53,6 +57,10 @@
 }
 
 - (BOOL) withRoleDescription {
+  return true;
+}
+
+- (BOOL) withAppName {
   return true;
 }
 

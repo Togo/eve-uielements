@@ -43,6 +43,18 @@
   shortcutString = [shortcut composeShortcutString];
   
   STAssertEqualObjects(shortcutString, @"Command Control T", @"Shortcut String is wrong");
+
+  shortcut.cmdChar = @"";
+  shortcut.cmdModifiers = [NSNumber numberWithInt:0];
+  shortcutString = [shortcut composeShortcutString];
+  
+  STAssertEqualObjects(shortcutString, @"", @"Shortcut should be empty");
+  
+  shortcut.cmdChar = @"";
+  shortcut.cmdModifiers = [NSNumber numberWithInt:10];
+  shortcutString = [shortcut composeShortcutString];
+  
+  STAssertEqualObjects(shortcutString, @"", @"Shortcut should be empty");
 }
 
 - (void) testCmdModifier {

@@ -10,6 +10,7 @@
 #import "Button.h"
 #import "MenuItem.h"
 #import "TextField.h"
+#import "NullUIElement.h"
 
 @implementation UIElement
 
@@ -32,12 +33,15 @@
   NSString *attribute = [UIElementUtilities readkAXAttributeString:ref :kAXRoleAttribute];
   NSString *elementRole = attribute ? attribute : @"";
   
-  if ([elementRole isEqualToString:(NSString*)kAXButtonRole]) {
+  if ([elementRole isEqualToString:(NSString*)kAXButtonRole]
+    || [elementRole isEqualToString:(NSString*)kAXRadioButtonRole]) {
     return [[Button alloc] initWithUIElementRef:ref];
   } else if ([elementRole isEqualToString:(NSString*)kAXMenuBarItemRole]) {
     return [[MenuItem alloc] initWithUIElementRef:ref];
   } else if ([elementRole isEqualToString:(NSString*)kAXTextFieldRole]) {
     return [[TextField alloc] initWithUIElementRef:ref];
+  } else {
+    return [[NullUIElement alloc] initWithUIElementRef:ref];
   }
   
   return nil;

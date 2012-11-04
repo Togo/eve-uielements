@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5A46AA16457BEB007B57A5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5A46A916457BEB007B57A5 /* Carbon.framework */; };
+		CD5A46FC16465799007B57A5 /* NullUIElement.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FA16465799007B57A5 /* NullUIElement.h */; };
+		CD5A46FD16465799007B57A5 /* NullUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A46FB16465799007B57A5 /* NullUIElement.m */; };
+		CD5A47011646588F007B57A5 /* NUllIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */; };
+		CD5A47021646588F007B57A5 /* NUllIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A47001646588E007B57A5 /* NUllIdentifier.m */; };
 		CDC8F0201633E1CF000E9006 /* Identifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F01E1633E1CF000E9006 /* Identifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F0241633E1F2000E9006 /* EVEIdentifierCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F0221633E1F2000E9006 /* EVEIdentifierCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F0251633E1F2000E9006 /* EVEIdentifierCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F0231633E1F2000E9006 /* EVEIdentifierCreator.m */; };
@@ -68,6 +73,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD5A46A916457BEB007B57A5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		CD5A46FA16465799007B57A5 /* NullUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullUIElement.h; sourceTree = "<group>"; };
+		CD5A46FB16465799007B57A5 /* NullUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullUIElement.m; sourceTree = "<group>"; };
+		CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUllIdentifier.h; sourceTree = "<group>"; };
+		CD5A47001646588E007B57A5 /* NUllIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUllIdentifier.m; sourceTree = "<group>"; };
 		CDC8F01E1633E1CF000E9006 /* Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Identifier.h; sourceTree = "<group>"; };
 		CDC8F0221633E1F2000E9006 /* EVEIdentifierCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVEIdentifierCreator.h; sourceTree = "<group>"; };
 		CDC8F0231633E1F2000E9006 /* EVEIdentifierCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVEIdentifierCreator.m; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5A46AA16457BEB007B57A5 /* Carbon.framework in Frameworks */,
 				CDE8B47F1633080A0085E130 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +212,7 @@
 		CDE8B4701633080A0085E130 = {
 			isa = PBXGroup;
 			children = (
+				CD5A46A916457BEB007B57A5 /* Carbon.framework */,
 				CDE8B4841633080A0085E130 /* UIElements */,
 				CDE8B4961633080B0085E130 /* UIElementsTests */,
 				CDE8B47D1633080A0085E130 /* Frameworks */,
@@ -304,6 +316,8 @@
 				CDC8F047163413BE000E9006 /* TextField.m */,
 				CDE8B4AF16330F960085E130 /* MenuItem.h */,
 				CDC8F05116341510000E9006 /* MenuItem.m */,
+				CD5A46FA16465799007B57A5 /* NullUIElement.h */,
+				CD5A46FB16465799007B57A5 /* NullUIElement.m */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -330,6 +344,8 @@
 				CDC8F04B16341423000E9006 /* TextFieldIdentifier.m */,
 				CDC8F04D163414D6000E9006 /* MenuItemIdentifier.h */,
 				CDC8F04E163414D6000E9006 /* MenuItemIdentifier.m */,
+				CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */,
+				CD5A47001646588E007B57A5 /* NUllIdentifier.m */,
 			);
 			name = Identifier;
 			sourceTree = "<group>";
@@ -361,6 +377,8 @@
 				CDC8F21C16381AB1000E9006 /* ObservableSubject.h in Headers */,
 				CDC8F22616381CAD000E9006 /* NotificationObserver.h in Headers */,
 				CDC8F22E16383AF4000E9006 /* UIElementNotifications.h in Headers */,
+				CD5A46FC16465799007B57A5 /* NullUIElement.h in Headers */,
+				CD5A47011646588F007B57A5 /* NUllIdentifier.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +496,8 @@
 				CDC8F1DD1636782D000E9006 /* MenuBarIndexing.m in Sources */,
 				CDC8F2131638015E000E9006 /* ClickOnUIElementSubject.m in Sources */,
 				CDC8F22F16383AF5000E9006 /* UIElementNotifications.m in Sources */,
+				CD5A46FD16465799007B57A5 /* NullUIElement.m in Sources */,
+				CD5A47021646588F007B57A5 /* NUllIdentifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +597,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UIElements\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -589,6 +613,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UIElements\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
