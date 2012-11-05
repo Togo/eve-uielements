@@ -60,6 +60,10 @@
 		CDE8B4BA163314E60085E130 /* EVEShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8B4B8163314E60085E130 /* EVEShortcut.m */; };
 		CDE8B4BD1633317A0085E130 /* EVEShortcutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8B4BC1633317A0085E130 /* EVEShortcutTests.m */; };
 		CDE8B4D01633D8E00085E130 /* EVEIdentifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8B4CF1633D8E00085E130 /* EVEIdentifierTests.m */; };
+		CDEE15421648232C00EDCDF4 /* StaticTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEE15401648232B00EDCDF4 /* StaticTextField.h */; };
+		CDEE15431648232C00EDCDF4 /* StaticTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE15411648232C00EDCDF4 /* StaticTextField.m */; };
+		CDEE15471648238C00EDCDF4 /* StaticTextFieldIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEE15451648238C00EDCDF4 /* StaticTextFieldIdentifier.h */; };
+		CDEE15481648238C00EDCDF4 /* StaticTextFieldIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE15461648238C00EDCDF4 /* StaticTextFieldIdentifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,10 @@
 		CDE8B4BC1633317A0085E130 /* EVEShortcutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVEShortcutTests.m; sourceTree = "<group>"; };
 		CDE8B4CF1633D8E00085E130 /* EVEIdentifierTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EVEIdentifierTests.m; sourceTree = "<group>"; };
 		CDE8B4D11633D8F30085E130 /* EVEIdentifierTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EVEIdentifierTests.h; sourceTree = "<group>"; };
+		CDEE15401648232B00EDCDF4 /* StaticTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTextField.h; sourceTree = "<group>"; };
+		CDEE15411648232C00EDCDF4 /* StaticTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTextField.m; sourceTree = "<group>"; };
+		CDEE15451648238C00EDCDF4 /* StaticTextFieldIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTextFieldIdentifier.h; sourceTree = "<group>"; };
+		CDEE15461648238C00EDCDF4 /* StaticTextFieldIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTextFieldIdentifier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +322,8 @@
 				CDC8F0391633FBAC000E9006 /* Button.m */,
 				CDE8B4AB16330F5A0085E130 /* TextField.h */,
 				CDC8F047163413BE000E9006 /* TextField.m */,
+				CDEE15401648232B00EDCDF4 /* StaticTextField.h */,
+				CDEE15411648232C00EDCDF4 /* StaticTextField.m */,
 				CDE8B4AF16330F960085E130 /* MenuItem.h */,
 				CDC8F05116341510000E9006 /* MenuItem.m */,
 				CD5A46FA16465799007B57A5 /* NullUIElement.h */,
@@ -342,6 +352,8 @@
 				CDC8F0271633EFA5000E9006 /* ButtonIdentifier.m */,
 				CDC8F0491634140D000E9006 /* TextFieldIdentifier.h */,
 				CDC8F04B16341423000E9006 /* TextFieldIdentifier.m */,
+				CDEE15451648238C00EDCDF4 /* StaticTextFieldIdentifier.h */,
+				CDEE15461648238C00EDCDF4 /* StaticTextFieldIdentifier.m */,
 				CDC8F04D163414D6000E9006 /* MenuItemIdentifier.h */,
 				CDC8F04E163414D6000E9006 /* MenuItemIdentifier.m */,
 				CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */,
@@ -379,6 +391,8 @@
 				CDC8F22E16383AF4000E9006 /* UIElementNotifications.h in Headers */,
 				CD5A46FC16465799007B57A5 /* NullUIElement.h in Headers */,
 				CD5A47011646588F007B57A5 /* NUllIdentifier.h in Headers */,
+				CDEE15421648232C00EDCDF4 /* StaticTextField.h in Headers */,
+				CDEE15471648238C00EDCDF4 /* StaticTextFieldIdentifier.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +512,8 @@
 				CDC8F22F16383AF5000E9006 /* UIElementNotifications.m in Sources */,
 				CD5A46FD16465799007B57A5 /* NullUIElement.m in Sources */,
 				CD5A47021646588F007B57A5 /* NUllIdentifier.m in Sources */,
+				CDEE15431648232C00EDCDF4 /* StaticTextField.m in Sources */,
+				CDEE15481648238C00EDCDF4 /* StaticTextFieldIdentifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

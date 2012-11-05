@@ -15,7 +15,7 @@
 }
 
 - (BOOL) withParentTitle {
-  return false;
+  return true;
 }
 
 @end

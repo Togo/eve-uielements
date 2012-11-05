@@ -10,7 +10,6 @@
 
 @interface TextFieldIdentifier : EVEIdentifierCreator
 
-- (BOOL) withDescription;
 - (BOOL) withSubrole;
-
+- (BOOL) withDescription;
 @end

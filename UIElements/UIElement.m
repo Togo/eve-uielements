@@ -10,6 +10,7 @@
 #import "Button.h"
 #import "MenuItem.h"
 #import "TextField.h"
+#import "StaticTextField.h"
 #import "NullUIElement.h"
 
 @implementation UIElement
@@ -30,6 +31,8 @@
 @synthesize help;
 @synthesize subrole;
 
+@synthesize textFieldValue;
+
 @synthesize disabled;
 
 + (id) createUIElement :(AXUIElementRef) ref {
@@ -44,6 +47,8 @@
     return [[MenuItem alloc] initWithUIElementRef:ref];
   } else if ([elementRole isEqualToString:(NSString*)kAXTextFieldRole]) {
     return [[TextField alloc] initWithUIElementRef:ref];
+  } else if ([elementRole isEqualToString:(NSString*)kAXStaticTextRole]) {
+    return [[StaticTextField alloc] initWithUIElementRef:ref];
   } else {
     return [[NullUIElement alloc] initWithUIElementRef:ref];
   }

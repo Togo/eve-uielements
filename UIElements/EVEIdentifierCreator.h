@@ -19,5 +19,5 @@
 - (BOOL) withTitle;
 - (BOOL) withSubrole;
 - (BOOL) withParentTitle;
-
+- (BOOL) withValue;
 @end

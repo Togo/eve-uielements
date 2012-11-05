@@ -47,6 +47,10 @@
       [temp appendString:[element parentTitle]];
   }
   
+  if ([self withValue]) {
+    [temp appendString:[element textFieldValue]];
+  }
+  
   self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
   
   return identifierString;
@@ -81,6 +85,10 @@
 }
 
 - (BOOL) withParentTitle {
+  return false;
+}
+
+- (BOOL) withValue {
   return false;
 }
 

@@ -49,6 +49,7 @@
 @property (strong, nonatomic) NSString *elementDescription;
 @property (strong, nonatomic) NSString *help;
 @property (strong, nonatomic) NSString *subrole;
+@property (strong, nonatomic) NSString *textFieldValue;
 
 @property (unsafe_unretained) Boolean disabled;
 
