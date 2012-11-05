@@ -16,7 +16,11 @@
 
 @synthesize shortcut;
 @synthesize owner;
+
+@synthesize user;
+
 @synthesize uiElementIdentifier;
+@synthesize shortcutString;
 
 @synthesize role;
 @synthesize roleDescription;
@@ -36,7 +40,7 @@
   if ([elementRole isEqualToString:(NSString*)kAXButtonRole]
     || [elementRole isEqualToString:(NSString*)kAXRadioButtonRole]) {
     return [[Button alloc] initWithUIElementRef:ref];
-  } else if ([elementRole isEqualToString:(NSString*)kAXMenuBarItemRole]) {
+  } else if ([elementRole isEqualToString:(NSString*)kAXMenuItemRole]) {
     return [[MenuItem alloc] initWithUIElementRef:ref];
   } else if ([elementRole isEqualToString:(NSString*)kAXTextFieldRole]) {
     return [[TextField alloc] initWithUIElementRef:ref];
@@ -51,7 +55,9 @@
   self = [super init];
   
   self.owner = [[Application alloc] initWithElementReference:ref];
-
+  
+  self.user = NSUserName();
+  
   // kAXRoleAttribute
   NSString *attribute = [UIElementUtilities readkAXAttributeString:ref :kAXRoleAttribute];
   self.role = attribute ? attribute : @"";

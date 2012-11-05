@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CD5A46AA16457BEB007B57A5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5A46A916457BEB007B57A5 /* Carbon.framework */; };
-		CD5A46FC16465799007B57A5 /* NullUIElement.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FA16465799007B57A5 /* NullUIElement.h */; };
+		CD5A46FC16465799007B57A5 /* NullUIElement.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FA16465799007B57A5 /* NullUIElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5A46FD16465799007B57A5 /* NullUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A46FB16465799007B57A5 /* NullUIElement.m */; };
-		CD5A47011646588F007B57A5 /* NUllIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */; };
+		CD5A47011646588F007B57A5 /* NUllIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5A47021646588F007B57A5 /* NUllIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A47001646588E007B57A5 /* NUllIdentifier.m */; };
 		CDC8F0201633E1CF000E9006 /* Identifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F01E1633E1CF000E9006 /* Identifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F0241633E1F2000E9006 /* EVEIdentifierCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F0221633E1F2000E9006 /* EVEIdentifierCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };

@@ -14,6 +14,7 @@
 
 - (void) update :(NSNotification *)notification;
 - (void) subscribeToNotificiation :(NSString*) notificationName;
+- (void) subscribeToGlobalNotificiation :(NSString*) notificationName;
 - (void) unsuscribeNotificiation :(NSString*) notificationName;
 
 @end

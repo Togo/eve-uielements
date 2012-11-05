@@ -15,6 +15,7 @@
   
   self = [super initWithUIElementRef:ref];
   self.uiElementIdentifier = [[MenuItemIdentifier alloc] createIdentifier:self];
+  self.shortcutString = [[self shortcut] composeShortcutString];
   
   return self;
 }

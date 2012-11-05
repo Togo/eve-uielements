@@ -19,6 +19,7 @@
   Application *owner;
   
   NSString *uiElementIdentifier;
+  NSString *shortcutString;
   
   NSString *role;
   NSString *roleDescription;
@@ -34,9 +35,12 @@
 @property (strong, nonatomic) EVEShortcut *shortcut;
 @property (strong, nonatomic) Application *owner;
 
+@property (strong, nonatomic) NSString *user;
+
 @property (unsafe_unretained) AXUIElementRef itemRef;
 
 @property (strong, nonatomic) NSString *uiElementIdentifier;
+@property (strong, nonatomic) NSString *shortcutString;
 
 @property (strong, nonatomic) NSString *role;
 @property (strong, nonatomic) NSString *roleDescription;
