@@ -36,7 +36,7 @@
   }
   
   if ([self withTitle]) {
-      [temp appendString:[element title]];
+      [temp appendString:[self cleanTitleString:[element title]]];
   }
   
   if ([self withSubrole]) {
@@ -44,6 +44,7 @@
   }
   
   if ([self withParentTitle]) {
+      [temp appendFormat:@"$$"];
       [temp appendString:[element parentTitle]];
   }
   
@@ -90,6 +91,29 @@
 
 - (BOOL) withValue {
   return false;
+}
+
+
+- (NSString*) cleanTitleString :(id) string {
+  // Check if this is a number
+  if([string isKindOfClass:NSString.class])  {
+    NSMutableString *cleanedTitle = [NSMutableString stringWithString:string];
+    NSCharacterSet *rangeFileNameSet = [NSCharacterSet characterSetWithCharactersInString:@"„”“"];
+    NSRange startIndex = [cleanedTitle rangeOfCharacterFromSet:rangeFileNameSet options:0];
+    NSRange endIndex = [cleanedTitle rangeOfCharacterFromSet:rangeFileNameSet options:NSBackwardsSearch];
+    if (startIndex.length != NSNotFound
+        && startIndex.location != endIndex.location) {
+      NSRange rangeToRemove = NSMakeRange((startIndex.location), (endIndex.location - startIndex.location) + 1);
+      
+      [cleanedTitle deleteCharactersInRange:rangeToRemove];
+    }
+    
+    NSCharacterSet *engCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"„…&”“."];
+   return [[cleanedTitle componentsSeparatedByCharactersInSet: engCharacterSet] componentsJoinedByString: @""];
+  } else {
+    return string;
+  }
+  
 }
 
 @end
