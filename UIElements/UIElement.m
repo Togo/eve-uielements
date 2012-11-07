@@ -12,6 +12,7 @@
 #import "TextField.h"
 #import "StaticTextField.h"
 #import "NullUIElement.h"
+#import "SearchTextField.h"
 
 @implementation UIElement
 
@@ -40,17 +41,35 @@
   NSString *attribute = [UIElementUtilities readkAXAttributeString:ref :kAXRoleAttribute];
   NSString *elementRole = attribute ? attribute : @"";
   
+  attribute = [UIElementUtilities readkAXAttributeString:ref :kAXSubroleAttribute];
+  NSString *subRole = attribute ? attribute : @"";
+  
   if ([elementRole isEqualToString:(NSString*)kAXButtonRole]
     || [elementRole isEqualToString:(NSString*)kAXRadioButtonRole]
     || [elementRole isEqualToString:(NSString*)kAXCheckBoxRole]) {
     return [[Button alloc] initWithUIElementRef:ref];
-  } else if ([elementRole isEqualToString:(NSString*)kAXMenuItemRole]) {
+  }
+  else if ([elementRole isEqualToString:(NSString*)kAXMenuItemRole])
+  {
     return [[MenuItem alloc] initWithUIElementRef:ref];
-  } else if ([elementRole isEqualToString:(NSString*)kAXTextFieldRole]) {
-    return [[TextField alloc] initWithUIElementRef:ref];
-  } else if ([elementRole isEqualToString:(NSString*)kAXStaticTextRole]) {
+  }
+  else if ([elementRole isEqualToString:(NSString*)kAXTextFieldRole])
+  {
+    if ([subRole isEqualToString:(NSString*) kAXSearchFieldSubrole])
+    {
+      return [[SearchTextField alloc] initWithUIElementRef:ref];
+    }
+    else
+    {
+      return [[TextField alloc] initWithUIElementRef:ref];
+    }
+  }
+  else if ([elementRole isEqualToString:(NSString*)kAXStaticTextRole])
+  {
     return [[StaticTextField alloc] initWithUIElementRef:ref];
-  } else {
+  }
+  else
+  {
     return [[NullUIElement alloc] initWithUIElementRef:ref];
   }
   

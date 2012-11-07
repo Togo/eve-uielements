@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *appName;
 @property (strong, nonatomic) NSString *bundleIdentifier;
 @property (strong, nonatomic) NSRunningApplication *runningApplication;
+@property (unsafe_unretained) Boolean guiSupport;
 
 - (id) initWithBundleIdentifier :(NSString*) bundle;
 

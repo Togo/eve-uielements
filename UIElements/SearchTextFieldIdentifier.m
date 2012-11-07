@@ -1,24 +1,20 @@
 //
-//  ButtonIdentifier.m
+//  SearchTextFieldIdentifier.m
 //  UIElements
 //
-//  Created by Tobias Sommer on 10/21/12.
+//  Created by Tobias Sommer on 11/7/12.
 //  Copyright (c) 2012 Tobias Sommer. All rights reserved.
 //
 
-#import "TextFieldIdentifier.h"
+#import "SearchTextFieldIdentifier.h"
 
-@implementation TextFieldIdentifier
+@implementation SearchTextFieldIdentifier
 
 - (BOOL) withDescription {
   return true;
 }
 
 - (BOOL) withSubrole {
-  return true;
-}
-
-- (BOOL) withValue {
   return true;
 }
 

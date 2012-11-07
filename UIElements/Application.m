@@ -13,6 +13,7 @@
 @synthesize bundleIdentifier;
 @synthesize appName;
 @synthesize runningApplication;
+@synthesize guiSupport;
 
 - (id) initWithBundleIdentifier :(NSString*) bundle {
   self = [super init];
@@ -20,6 +21,7 @@
   self.bundleIdentifier = bundle;
   self.appName = [self createApplicationName];
   self.runningApplication = [self getOSXRunningApplicationObject];
+  self.guiSupport = NO;
   
   return self;
 }

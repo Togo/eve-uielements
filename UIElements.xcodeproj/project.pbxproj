@@ -64,6 +64,10 @@
 		CDEE15431648232C00EDCDF4 /* StaticTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE15411648232C00EDCDF4 /* StaticTextField.m */; };
 		CDEE15471648238C00EDCDF4 /* StaticTextFieldIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEE15451648238C00EDCDF4 /* StaticTextFieldIdentifier.h */; };
 		CDEE15481648238C00EDCDF4 /* StaticTextFieldIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE15461648238C00EDCDF4 /* StaticTextFieldIdentifier.m */; };
+		CDEE1563164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEE1561164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h */; };
+		CDEE1564164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1562164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m */; };
+		CDEE1568164ACF0800EDCDF4 /* SearchTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEE1566164ACF0700EDCDF4 /* SearchTextField.h */; };
+		CDEE1569164ACF0800EDCDF4 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1567164ACF0700EDCDF4 /* SearchTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +148,10 @@
 		CDEE15411648232C00EDCDF4 /* StaticTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTextField.m; sourceTree = "<group>"; };
 		CDEE15451648238C00EDCDF4 /* StaticTextFieldIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTextFieldIdentifier.h; sourceTree = "<group>"; };
 		CDEE15461648238C00EDCDF4 /* StaticTextFieldIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTextFieldIdentifier.m; sourceTree = "<group>"; };
+		CDEE1561164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextFieldIdentifier.h; sourceTree = "<group>"; };
+		CDEE1562164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextFieldIdentifier.m; sourceTree = "<group>"; };
+		CDEE1566164ACF0700EDCDF4 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextField.h; sourceTree = "<group>"; };
+		CDEE1567164ACF0700EDCDF4 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +332,8 @@
 				CDC8F047163413BE000E9006 /* TextField.m */,
 				CDEE15401648232B00EDCDF4 /* StaticTextField.h */,
 				CDEE15411648232C00EDCDF4 /* StaticTextField.m */,
+				CDEE1566164ACF0700EDCDF4 /* SearchTextField.h */,
+				CDEE1567164ACF0700EDCDF4 /* SearchTextField.m */,
 				CDE8B4AF16330F960085E130 /* MenuItem.h */,
 				CDC8F05116341510000E9006 /* MenuItem.m */,
 				CD5A46FA16465799007B57A5 /* NullUIElement.h */,
@@ -354,6 +364,8 @@
 				CDC8F04B16341423000E9006 /* TextFieldIdentifier.m */,
 				CDEE15451648238C00EDCDF4 /* StaticTextFieldIdentifier.h */,
 				CDEE15461648238C00EDCDF4 /* StaticTextFieldIdentifier.m */,
+				CDEE1561164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h */,
+				CDEE1562164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m */,
 				CDC8F04D163414D6000E9006 /* MenuItemIdentifier.h */,
 				CDC8F04E163414D6000E9006 /* MenuItemIdentifier.m */,
 				CD5A46FF1646588E007B57A5 /* NUllIdentifier.h */,
@@ -393,6 +405,8 @@
 				CD5A47011646588F007B57A5 /* NUllIdentifier.h in Headers */,
 				CDEE15421648232C00EDCDF4 /* StaticTextField.h in Headers */,
 				CDEE15471648238C00EDCDF4 /* StaticTextFieldIdentifier.h in Headers */,
+				CDEE1563164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h in Headers */,
+				CDEE1568164ACF0800EDCDF4 /* SearchTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +528,8 @@
 				CD5A47021646588F007B57A5 /* NUllIdentifier.m in Sources */,
 				CDEE15431648232C00EDCDF4 /* StaticTextField.m in Sources */,
 				CDEE15481648238C00EDCDF4 /* StaticTextFieldIdentifier.m in Sources */,
+				CDEE1564164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m in Sources */,
+				CDEE1569164ACF0800EDCDF4 /* SearchTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
