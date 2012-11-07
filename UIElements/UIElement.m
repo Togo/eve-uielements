@@ -112,6 +112,10 @@
   attribute = [UIElementUtilities readkAXAttributeString:ref :kAXSubroleAttribute];
   self.subrole = attribute ? attribute : @"";
   
+  // kAXValueAttribute
+  attribute = [UIElementUtilities readkAXAttributeString:ref :kAXValueAttribute];
+  self.textFieldValue = attribute ? attribute : @"";
+  
   // The Shortcut
   self.shortcut = [[EVEShortcut alloc] initWithUIElementRef:ref];
   
