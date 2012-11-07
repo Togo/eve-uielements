@@ -41,7 +41,8 @@
   NSString *elementRole = attribute ? attribute : @"";
   
   if ([elementRole isEqualToString:(NSString*)kAXButtonRole]
-    || [elementRole isEqualToString:(NSString*)kAXRadioButtonRole]) {
+    || [elementRole isEqualToString:(NSString*)kAXRadioButtonRole]
+    || [elementRole isEqualToString:(NSString*)kAXCheckBoxRole]) {
     return [[Button alloc] initWithUIElementRef:ref];
   } else if ([elementRole isEqualToString:(NSString*)kAXMenuItemRole]) {
     return [[MenuItem alloc] initWithUIElementRef:ref];
