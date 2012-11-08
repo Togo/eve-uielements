@@ -36,7 +36,7 @@
   }
   
   if ([self withTitle]) {
-      [temp appendString:[self cleanTitleString:[element title]]];
+      [temp appendString:[self cleanString:[element title]]];
   }
   
   if ([self withSubrole]) {
@@ -49,7 +49,13 @@
   }
   
   if ([self withValue]) {
-    [temp appendString:[element textFieldValue]];
+    NSRange range;
+    if ([[element textFieldValue] length] > 50) {
+      range = NSMakeRange(0, 50);
+    } else {
+      range = NSMakeRange(0, [[element textFieldValue] length]);
+    }
+    [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
   }
   
   self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
@@ -94,7 +100,7 @@
 }
 
 
-- (NSString*) cleanTitleString :(id) string {
+- (NSString*) cleanString :(id) string {
   // Check if this is a number
   if([string isKindOfClass:NSString.class])  {
     NSMutableString *cleanedTitle = [NSMutableString stringWithString:string];
