@@ -11,7 +11,7 @@
 @implementation TextFieldIdentifier
 
 - (BOOL) withDescription {
-  return false;
+  return true;
 }
 
 - (BOOL) withSubrole {
