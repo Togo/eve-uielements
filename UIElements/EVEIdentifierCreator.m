@@ -56,6 +56,7 @@
         range = NSMakeRange(0, [[element textFieldValue] length]);
       }
       [element textFieldValue] ? [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]] : [temp appendString:@""];
+      [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
   }
   
   self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
