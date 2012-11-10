@@ -22,6 +22,8 @@
 @synthesize user;
 
 @synthesize uiElementIdentifier;
+@synthesize cocoaIdentifier;
+
 @synthesize shortcutString;
 
 @synthesize role;
@@ -117,6 +119,10 @@
     // kAXValueAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXValueAttribute];
     self.textFieldValue = attribute ? attribute : @"";
+
+    // kAXValueAttribute
+    attribute = [UIElementUtilities readkAXAttributeString:ref :kAXIdentifierAttribute];
+    self.cocoaIdentifier = attribute ? attribute : @"";
     
     // The Shortcut
     self.shortcut = [[EVEShortcut alloc] initWithUIElementRef:ref];

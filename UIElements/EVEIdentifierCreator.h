@@ -20,4 +20,5 @@
 - (BOOL) withSubrole;
 - (BOOL) withParentTitle;
 - (BOOL) withValue;
+
 @end

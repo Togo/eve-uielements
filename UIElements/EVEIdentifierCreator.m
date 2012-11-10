@@ -16,36 +16,36 @@
   NSMutableString *temp = [NSMutableString stringWithString:@""];
   @synchronized(self) {
     if ([self withRole]) {
-      [temp appendString:[element role]];
+       [element role] ? [temp appendString:[element role]] : [temp appendString:@""];
     }
 
     if ([self withRoleDescription]) {
-        [temp appendString:[element roleDescription]];
+        [element roleDescription] ? [temp appendString:[element roleDescription]] : [temp appendString:@""];
     }
     
     if ([self withAppName]) {
-        [temp appendString:[[element owner] appName]];
+        [[element owner] appName] ? [temp appendString:[[element owner] appName]] : [temp appendString:@""];
     }
     
     if ([self withDescription]) {
-      [temp appendString:[element elementDescription]];
+      [element elementDescription] ? [temp appendString:[element elementDescription]] : [temp appendString:@""];
     }
     
     if ([self withHelp]) {
-      [temp appendString:[element help]];
+      [element help] ? [temp appendString:[element help]] : [temp appendString:@""];
     }
     
     if ([self withTitle]) {
-        [temp appendString:[self cleanString:[element title]]];
+        [element title] ? [temp appendString:[element title]] : [temp appendString:@""];
     }
     
     if ([self withSubrole]) {
-        [temp appendString:[element subrole]];
+        [element subrole] ? [temp appendString:[element subrole]] : [temp appendString:@""];
     }
     
     if ([self withParentTitle]) {
         [temp appendFormat:@"$$"];
-        [temp appendString:[element parentTitle]];
+        [element parentTitle] ? [temp appendString:[element parentTitle]] : [temp appendString:@""];
     }
     
     if ([self withValue]) {
@@ -55,7 +55,7 @@
       } else {
         range = NSMakeRange(0, [[element textFieldValue] length]);
       }
-      [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
+      [element textFieldValue] ? [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]] : [temp appendString:@""];
   }
   
   self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];

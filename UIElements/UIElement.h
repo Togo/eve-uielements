@@ -40,6 +40,8 @@
 @property (unsafe_unretained) AXUIElementRef itemRef;
 
 @property (strong, nonatomic) NSString *uiElementIdentifier;
+@property (strong, nonatomic) NSString *cocoaIdentifier;
+
 @property (strong, nonatomic) NSString *shortcutString;
 
 @property (strong, nonatomic) NSString *role;
