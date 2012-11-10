@@ -14,8 +14,9 @@
   NSString *bundleIdentifier;
 }
 
-@property (strong, nonatomic) NSString *appName;
-@property (strong, nonatomic) NSString *bundleIdentifier;
+@property (copy) NSString *appName;
+@property (copy) NSString *bundleIdentifier;
+@property (unsafe_unretained) NSInteger appID;
 @property (strong, nonatomic) NSRunningApplication *runningApplication;
 @property (unsafe_unretained) Boolean guiSupport;
 

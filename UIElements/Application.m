@@ -14,6 +14,7 @@
 @synthesize appName;
 @synthesize runningApplication;
 @synthesize guiSupport;
+@synthesize appID;
 
 - (id) initWithBundleIdentifier :(NSString*) bundle {
   self = [super init];
@@ -61,7 +62,7 @@
   if (name)
      return name;
   else
-    return @"";
+    return [bundleIdentifier lastPathComponent];
 }
 
 - (AXUIElementRef) getAppRef {

@@ -14,53 +14,54 @@
 
 - (NSString*) createIdentifier :(UIElement*) element {
   NSMutableString *temp = [NSMutableString stringWithString:@""];
-  
-  if ([self withRole]) {
-    [temp appendString:[element role]];
-  }
-
-  if ([self withRoleDescription]) {
-      [temp appendString:[element roleDescription]];
-  }
-  
-  if ([self withAppName]) {
-      [temp appendString:[[element owner] appName]];
-  }
-  
-  if ([self withDescription]) {
-    [temp appendString:[element elementDescription]];
-  }
-  
-  if ([self withHelp]) {
-    [temp appendString:[element help]];
-  }
-  
-  if ([self withTitle]) {
-      [temp appendString:[self cleanString:[element title]]];
-  }
-  
-  if ([self withSubrole]) {
-      [temp appendString:[element subrole]];
-  }
-  
-  if ([self withParentTitle]) {
-      [temp appendFormat:@"$$"];
-      [temp appendString:[element parentTitle]];
-  }
-  
-  if ([self withValue]) {
-    NSRange range;
-    if ([[element textFieldValue] length] > 50) {
-      range = NSMakeRange(0, 50);
-    } else {
-      range = NSMakeRange(0, [[element textFieldValue] length]);
+  @synchronized(self) {
+    if ([self withRole]) {
+      [temp appendString:[element role]];
     }
-    [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
+
+    if ([self withRoleDescription]) {
+        [temp appendString:[element roleDescription]];
+    }
+    
+    if ([self withAppName]) {
+        [temp appendString:[[element owner] appName]];
+    }
+    
+    if ([self withDescription]) {
+      [temp appendString:[element elementDescription]];
+    }
+    
+    if ([self withHelp]) {
+      [temp appendString:[element help]];
+    }
+    
+    if ([self withTitle]) {
+        [temp appendString:[self cleanString:[element title]]];
+    }
+    
+    if ([self withSubrole]) {
+        [temp appendString:[element subrole]];
+    }
+    
+    if ([self withParentTitle]) {
+        [temp appendFormat:@"$$"];
+        [temp appendString:[element parentTitle]];
+    }
+    
+    if ([self withValue]) {
+      NSRange range;
+      if ([[element textFieldValue] length] > 50) {
+        range = NSMakeRange(0, 50);
+      } else {
+        range = NSMakeRange(0, [[element textFieldValue] length]);
+      }
+      [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
   }
   
   self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
-  
-  return identifierString;
+
+    return identifierString;
+  }
 }
 
 - (BOOL) withRole {
