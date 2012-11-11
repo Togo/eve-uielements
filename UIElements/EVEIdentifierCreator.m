@@ -58,7 +58,7 @@
     }
     
     if ([self withTitle]) {
-        [element title] ? [temp appendString:[element title]] : [temp appendString:@""];
+        [element title] ? [temp appendString:[self cleanString:[element title]]] : [temp appendString:@""];
     }
     
     if ([self withSubrole]) {
