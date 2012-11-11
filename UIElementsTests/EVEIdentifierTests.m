@@ -85,7 +85,7 @@
   EVEIdentifierCreator *creator = [[EVEIdentifierCreator alloc] init];
   
   creator.identifierString = [creator createCocoaIdentifier:element];
-  STAssertEqualObjects(creator.identifierString, @"roleroledescription_ns:173", @"Identifier is wrong");
+  STAssertEqualObjects(creator.identifierString, @"roleroledescriptiontitledescription_ns:173", @"Identifier is wrong");
 }
 
 
