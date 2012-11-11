@@ -22,7 +22,7 @@
 @synthesize user;
 
 @synthesize uiElementIdentifier;
-@synthesize cocoaIdentifier;
+@synthesize cocoaIdentifierString;
 
 @synthesize shortcutString;
 
@@ -33,7 +33,7 @@
 @synthesize elementDescription;
 @synthesize help;
 @synthesize subrole;
-
+@synthesize cocoaIdentifierAttribute;
 @synthesize textFieldValue;
 
 @synthesize disabled;
@@ -122,7 +122,7 @@
 
     // kAXValueAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXIdentifierAttribute];
-    self.cocoaIdentifier = attribute ? attribute : @"";
+    self.cocoaIdentifierAttribute = attribute ? attribute : @"";
     
     // The Shortcut
     self.shortcut = [[EVEShortcut alloc] initWithUIElementRef:ref];

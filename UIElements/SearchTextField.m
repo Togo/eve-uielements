@@ -13,7 +13,10 @@
 
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
   self = [super initWithUIElementRef:ref];
-  self.uiElementIdentifier = [[SearchTextFieldIdentifier alloc] createIdentifier:self];
+  
+  SearchTextFieldIdentifier *identCreator = [[SearchTextFieldIdentifier alloc] init];
+  self.uiElementIdentifier = [identCreator createIdentifier:self];
+  self.cocoaIdentifierString = [identCreator createCocoaIdentifier:self];
   
   return self;
 }

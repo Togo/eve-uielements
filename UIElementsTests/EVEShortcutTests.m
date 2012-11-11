@@ -108,7 +108,7 @@
   // If there is no shortcut return a empty String
   shortcut.virtualKey = [NSNumber numberWithInt:97];
   virtualKey = [shortcut virtualKeyString];
-  STAssertEqualObjects(virtualKey, @"F12", @"Virtual Key is wrong");
+  STAssertEqualObjects(virtualKey, @" F6 ", @"Virtual Key is wrong");
 }
 
 @end

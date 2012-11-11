@@ -12,6 +12,7 @@
 @protocol  Identifier <NSObject>
 
 - (NSString*) createIdentifier :(id) element;
+- (NSString*) createCocoaIdentifier :(id) element;
 
 @end
 

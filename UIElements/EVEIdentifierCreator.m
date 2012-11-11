@@ -11,6 +11,25 @@
 @implementation EVEIdentifierCreator
 
 @synthesize identifierString;
+@synthesize cocoaIdentifierString;
+
+- (NSString*) createCocoaIdentifier :(UIElement*) element {
+  NSMutableString *temp = [NSMutableString stringWithString:@""];
+  if ([[element cocoaIdentifierAttribute] length] > 0) {
+    @synchronized(self) {
+      [element role] ? [temp appendString:[element role]] : [temp appendString:@""];
+      [element roleDescription] ? [temp appendString:[element roleDescription]] : [temp appendString:@""];
+      [element cocoaIdentifierAttribute] ? [temp appendString:[element cocoaIdentifierAttribute]] : [temp appendString:@""];
+      
+    }
+  } else {
+    self.cocoaIdentifierString = @"";
+  }
+  
+  self.cocoaIdentifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
+  
+  return self.cocoaIdentifierString;
+}
 
 - (NSString*) createIdentifier :(UIElement*) element {
   NSMutableString *temp = [NSMutableString stringWithString:@""];
@@ -48,7 +67,8 @@
         [element parentTitle] ? [temp appendString:[element parentTitle]] : [temp appendString:@""];
     }
     
-    if ([self withValue]) {
+    if ([self withValue]
+        && [element textFieldValue]) {
       NSRange range;
       if ([[element textFieldValue] length] > 50) {
         range = NSMakeRange(0, 50);
@@ -59,7 +79,7 @@
       [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
   }
   
-  self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
+    self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
 
     return identifierString;
   }

@@ -11,7 +11,8 @@
 
 @interface EVEIdentifierCreator : NSObject <Identifier>
 
-@property (strong, nonatomic) NSString *identifierString;
+@property (copy) NSString *identifierString;
+@property (copy) NSString *cocoaIdentifierString;
 
 - (BOOL) withDescription;
 - (BOOL) withHelp;

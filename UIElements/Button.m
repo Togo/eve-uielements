@@ -13,9 +13,11 @@
 @implementation Button
 
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
-  
   self = [super initWithUIElementRef:ref];
-  self.uiElementIdentifier = [[ButtonIdentifier alloc] createIdentifier:self];
+  
+  ButtonIdentifier *identCreator = [[ButtonIdentifier alloc] init];
+  self.uiElementIdentifier = [identCreator createIdentifier:self];
+  self.cocoaIdentifierString = [identCreator createCocoaIdentifier:self];
   
   return self;
 }

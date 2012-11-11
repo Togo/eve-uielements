@@ -40,7 +40,7 @@
 @property (unsafe_unretained) AXUIElementRef itemRef;
 
 @property (strong, nonatomic) NSString *uiElementIdentifier;
-@property (strong, nonatomic) NSString *cocoaIdentifier;
+@property (strong, nonatomic) NSString *cocoaIdentifierString;
 
 @property (strong, nonatomic) NSString *shortcutString;
 
@@ -52,6 +52,7 @@
 @property (strong, nonatomic) NSString *help;
 @property (strong, nonatomic) NSString *subrole;
 @property (strong, nonatomic) NSString *textFieldValue;
+@property (strong, nonatomic) NSString *cocoaIdentifierAttribute;
 
 @property (unsafe_unretained) Boolean disabled;
 

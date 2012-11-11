@@ -12,14 +12,12 @@
 @implementation StaticTextField
 
 - (id) initWithUIElementRef :(AXUIElementRef) ref {
-  // kaxValue
-  NSString *attribute = [UIElementUtilities readkAXAttributeString:ref :kAXValueAttribute];
-  self.textFieldValue = attribute ? attribute : @"";
-  
   self = [super initWithUIElementRef:ref];
-  self.uiElementIdentifier = [[StaticTextFieldIdentifier alloc] createIdentifier:self];
-
   
+  StaticTextFieldIdentifier *identCreator = [[StaticTextFieldIdentifier alloc] init];
+  self.uiElementIdentifier = [identCreator createIdentifier:self];
+  self.cocoaIdentifierString = [identCreator createCocoaIdentifier:self];
+
   return self;
 }
 

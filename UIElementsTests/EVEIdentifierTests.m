@@ -24,6 +24,7 @@
   [element setTitle:@"Title"];
   [element setParentTitle:@"ParentTitle"];
   [element setSubrole:@"Subrole"];
+  [element setCocoaIdentifierAttribute:@"_NS:173"];
 
   // Set-up code here.
 }
@@ -57,7 +58,7 @@
   MenuItemIdentifier *menuIdentifier = [[MenuItemIdentifier alloc] init];
   
   menuIdentifier.identifierString = [menuIdentifier createIdentifier:element];
-  STAssertEqualObjects(menuIdentifier.identifierString, @"roleroledescriptiontitleparenttitle", @"Identifier is wrong");
+  STAssertEqualObjects(menuIdentifier.identifierString, @"roleroledescriptiontitle$$parenttitle", @"Identifier is wrong");
   
   STAssertTrue([menuIdentifier withTitle], @"Must return title true");
   STAssertTrue([menuIdentifier withParentTitle], @"");
@@ -65,6 +66,7 @@
   STAssertFalse([menuIdentifier withHelp], @"Must return false");
   STAssertFalse([menuIdentifier withSubrole], @"Must return false");
 }
+
 
 - (void) testTextFieldIdentifier {
   TextFieldIdentifier *textFieldIdentifier = [[TextFieldIdentifier alloc] init];
@@ -78,5 +80,13 @@
   STAssertFalse([textFieldIdentifier withHelp], @"");
   STAssertTrue([textFieldIdentifier withSubrole], @"");
 }
+
+- (void) testCocoaIdentifier {
+  EVEIdentifierCreator *creator = [[EVEIdentifierCreator alloc] init];
+  
+  creator.identifierString = [creator createCocoaIdentifier:element];
+  STAssertEqualObjects(creator.identifierString, @"roleroledescription_ns:173", @"Identifier is wrong");
+}
+
 
 @end
