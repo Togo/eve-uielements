@@ -19,6 +19,8 @@
     @synchronized(self) {
       [element role] ? [temp appendString:[element role]] : [temp appendString:@""];
       [element roleDescription] ? [temp appendString:[element roleDescription]] : [temp appendString:@""];
+      [element title] ? [temp appendString:[element title]] : [temp appendString:@""];
+      [element elementDescription] ? [temp appendString:[element elementDescription]] : [temp appendString:@""];
       [element cocoaIdentifierAttribute] ? [temp appendString:[element cocoaIdentifierAttribute]] : [temp appendString:@""];
       
     }
