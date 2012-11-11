@@ -54,7 +54,8 @@
   [shortcutString appendString:[self cmdChar]];
   
   if (   [shortcutString isEqualTo:@"Command "]
-      || [shortcutString isEqualTo:@"Option "] ) {
+      || [shortcutString isEqualTo:@"Option "]
+      || [shortcutString isEqualTo:@"Command Option "]) {
     [shortcutString setString:@""];
   }
   
