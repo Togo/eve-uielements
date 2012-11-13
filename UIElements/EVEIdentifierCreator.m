@@ -7,6 +7,7 @@
 //
 
 #import "EVEIdentifierCreator.h"
+#import "UIElementUtilities.h"
 
 @implementation EVEIdentifierCreator
 
@@ -57,7 +58,7 @@
     }
     
     if ([self withTitle]) {
-        [element title] ? [temp appendString:[self cleanString:[element title]]] : [temp appendString:@""];
+        [element title] ? [temp appendString:[UIElementUtilities cleanString:[element title]]] : [temp appendString:@""];
     }
     
     if ([self withSubrole]) {
@@ -77,8 +78,8 @@
       } else {
         range = NSMakeRange(0, [[element textFieldValue] length]);
       }
-      [element textFieldValue] ? [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]] : [temp appendString:@""];
-      [temp appendString:[self cleanString:[[element textFieldValue] substringWithRange:range]]];
+      [element textFieldValue] ? [temp appendString:[UIElementUtilities cleanString:[[element textFieldValue] substringWithRange:range]]] : [temp appendString:@""];
+      [temp appendString:[UIElementUtilities cleanString:[[element textFieldValue] substringWithRange:range]]];
   }
   
     self.identifierString = [[[NSString stringWithString:temp] stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
@@ -123,41 +124,5 @@
   return false;
 }
 
-
-- (NSString*) cleanString :(id) string {
-  // Check if this is a number
-  if([string isKindOfClass:NSString.class])  {
-    NSMutableString *cleanedTitle = [NSMutableString stringWithString:string];
-    
-    // remove Text between „”
-    NSCharacterSet *rangeFileNameSet = [NSCharacterSet characterSetWithCharactersInString:@"„”“"];
-    NSRange startIndex = [cleanedTitle rangeOfCharacterFromSet:rangeFileNameSet options:0];
-    NSRange endIndex = [cleanedTitle rangeOfCharacterFromSet:rangeFileNameSet options:NSBackwardsSearch];
-    if (startIndex.length != NSNotFound
-        && startIndex.location != endIndex.location) {
-      NSRange rangeToRemove = NSMakeRange((startIndex.location), (endIndex.location - startIndex.location) + 1);
-      
-      [cleanedTitle deleteCharactersInRange:rangeToRemove];
-    }
-    
-    // remove Text between ()
-    rangeFileNameSet = [NSCharacterSet characterSetWithCharactersInString:@"()"];
-    startIndex = [cleanedTitle rangeOfCharacterFromSet:rangeFileNameSet options:0];
-    endIndex = [cleanedTitle rangeOfCharacterFromSet:rangeFileNameSet options:NSBackwardsSearch];
-    if (startIndex.length != NSNotFound
-        && startIndex.location != endIndex.location) {
-      NSRange rangeToRemove = NSMakeRange((startIndex.location), (endIndex.location - startIndex.location) + 1);
-      
-      [cleanedTitle deleteCharactersInRange:rangeToRemove];
-    }
-
-    
-    NSCharacterSet *engCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"„…&”“."];
-   return [[cleanedTitle componentsSeparatedByCharactersInSet: engCharacterSet] componentsJoinedByString: @""];
-  } else {
-    return string;
-  }
-  
-}
 
 @end

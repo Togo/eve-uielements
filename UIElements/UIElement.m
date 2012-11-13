@@ -97,7 +97,7 @@
     
     // kAXTitleAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXTitleAttribute];
-    self.title = attribute ? attribute : @"";
+    self.title = attribute ? [UIElementUtilities cleanString:attribute] : @"";
     
     // kAXParentTitleAttribute
     AXUIElementRef parentRef = [UIElementUtilities secondParent:ref];
