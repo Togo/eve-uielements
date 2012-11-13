@@ -14,15 +14,12 @@
 - (void)setUp
 {
   [super setUp];
-  
-  
   // Set-up code here.
 }
 
 - (void)tearDown
 {
   // Tear-down code here.
-  
   [super tearDown];
 }
 
@@ -34,7 +31,7 @@
   ClickOnUIElementSubject *mouseClickedSubject = [[ClickOnUIElementSubject alloc] init];
   STAssertNotNil(mouseClickedSubject, @"");
   STAssertNotNil(mouseClickedSubject.globalMouseListener, @"");
-  STAssertNotNil(mouseClickedSubject.systemWideElement, @"");
+//  STAssertNotNil(mouseClickedSubject.systemWideElement, @"");
   
 }
 

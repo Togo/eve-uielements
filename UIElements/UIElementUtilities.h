@@ -12,5 +12,6 @@
 
 + (NSString*) readkAXAttributeString:(AXUIElementRef)element :(CFStringRef) kAXAttribute;
 + (AXUIElementRef) secondParent :(AXUIElementRef) elementRef;
++ (NSString*) cleanString :(id) string;
 
 @end
