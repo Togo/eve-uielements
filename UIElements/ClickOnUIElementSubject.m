@@ -50,7 +50,6 @@
 // -------------------------------------------------------------------------------
 - (void)updateCurrentUIElement
 {
-  
   // The current mouse position with origin at top right.
   NSPoint cocoaPoint = [NSEvent mouseLocation];
   
