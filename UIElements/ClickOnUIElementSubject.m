@@ -50,15 +50,16 @@
 // -------------------------------------------------------------------------------
 - (void)updateCurrentUIElement
 {
+//  NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: get called");
   // The current mouse position with origin at top right.
   NSPoint cocoaPoint = [NSEvent mouseLocation];
   
   // Only ask for the UIElement under the mouse if has moved since the last check.
   if (!NSEqualPoints(cocoaPoint, _lastMousePoint)) {
-    
+//  NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: new mouse Position");
     CGPoint pointAsCGPoint = [UIElementUtilities_org carbonScreenPointFromCocoaScreenPoint:cocoaPoint];
     
-    AXUIElementRef newElement;
+    AXUIElementRef newElement = NULL;
     
     /* If the interaction window is not visible, but we still think we are interacting, change that */
     if (_currentlyInteracting) {
@@ -67,13 +68,20 @@
     
     // Ask Accessibility API for UI Element under the mouse
     // And update the display if a different UIElement
-    if (AXUIElementCopyElementAtPosition( _systemWideElement, pointAsCGPoint.x, pointAsCGPoint.y, &newElement ) == kAXErrorSuccess
+    AXError error = AXUIElementCopyElementAtPosition( _systemWideElement, pointAsCGPoint.x, pointAsCGPoint.y, &newElement );
+//    NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: error by AXUIElementCopyElementAtPosition? => :%i:", error);
+    if ( error == kAXErrorSuccess
         && newElement
         && ([self currentUIElement] == NULL || ! CFEqual( [self currentUIElement], newElement ))) {
       
+//      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: set new Element. old -> :%@: <--> new :%@: ", [self currentUIElement], newElement);
       [self setCurrentUIElement:newElement];
     }
-    
+    else {
+      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: error by AXUIElementCopyElementAtPosition? => :%i:", error);
+      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: new Element? => :%@:", newElement);
+      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: current UIElement || CFEqual? => :%i:", ([self currentUIElement] == NULL || ! CFEqual( [self currentUIElement], newElement )));
+    }
     _lastMousePoint = cocoaPoint;
   }
 }
