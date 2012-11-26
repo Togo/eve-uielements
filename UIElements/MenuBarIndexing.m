@@ -16,6 +16,8 @@
 - (NSArray*) indexMenuBar :(AXUIElementRef) appRef {
   elements = [NSMutableArray array];
   CFTypeRef menuBarRef;
+  
+
 
   AXUIElementCopyAttributeValue(appRef, kAXMenuBarAttribute, (CFTypeRef*)&menuBarRef);
   
