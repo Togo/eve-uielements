@@ -61,8 +61,10 @@
 	name = [appBundle objectForInfoDictionaryKey:(id)kCFBundleNameKey];
   if (name)
      return name;
-  else
+  else if ([bundleIdentifier lastPathComponent])
     return [bundleIdentifier lastPathComponent];
+  else
+    return bundleIdentifier;
 }
 
 - (AXUIElementRef) getAppRef {
