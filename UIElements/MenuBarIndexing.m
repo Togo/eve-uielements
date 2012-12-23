@@ -17,8 +17,6 @@
   elements = [NSMutableArray array];
   CFTypeRef menuBarRef;
   
-
-
   AXUIElementCopyAttributeValue(appRef, kAXMenuBarAttribute, (CFTypeRef*)&menuBarRef);
   
   if (menuBarRef != nil) {
@@ -41,7 +39,7 @@
   
   if (childrenArray.count > 0) {
     for (id oneChildren in childrenArray) {
-      [self readAllMenuItems :(__bridge AXUIElementRef) oneChildren ];
+      [self readAllMenuItems :(__bridge AXUIElementRef) oneChildren];
     }
   }
   else {

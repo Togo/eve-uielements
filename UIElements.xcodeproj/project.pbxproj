@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5901301663D77B000613F7 /* WindowIndexing.h in Headers */ = {isa = PBXBuildFile; fileRef = CD59012E1663D77B000613F7 /* WindowIndexing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD5901311663D77B000613F7 /* WindowIndexing.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59012F1663D77B000613F7 /* WindowIndexing.m */; };
 		CD5A46AA16457BEB007B57A5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5A46A916457BEB007B57A5 /* Carbon.framework */; };
 		CD5A46FC16465799007B57A5 /* NullUIElement.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5A46FA16465799007B57A5 /* NullUIElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5A46FD16465799007B57A5 /* NullUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5A46FB16465799007B57A5 /* NullUIElement.m */; };
@@ -81,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD59012E1663D77B000613F7 /* WindowIndexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowIndexing.h; sourceTree = "<group>"; };
+		CD59012F1663D77B000613F7 /* WindowIndexing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowIndexing.m; sourceTree = "<group>"; };
 		CD5A46A916457BEB007B57A5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		CD5A46FA16465799007B57A5 /* NullUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullUIElement.h; sourceTree = "<group>"; };
 		CD5A46FB16465799007B57A5 /* NullUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullUIElement.m; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				CDC8F1D7163677E2000E9006 /* UIElementIndexing.m */,
 				CDC8F1DA1636782D000E9006 /* MenuBarIndexing.h */,
 				CDC8F1DB1636782D000E9006 /* MenuBarIndexing.m */,
+				CD59012E1663D77B000613F7 /* WindowIndexing.h */,
+				CD59012F1663D77B000613F7 /* WindowIndexing.m */,
 			);
 			name = Indexing;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				CDEE15471648238C00EDCDF4 /* StaticTextFieldIdentifier.h in Headers */,
 				CDEE1563164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h in Headers */,
 				CDEE1568164ACF0800EDCDF4 /* SearchTextField.h in Headers */,
+				CD5901301663D77B000613F7 /* WindowIndexing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +537,7 @@
 				CDEE15481648238C00EDCDF4 /* StaticTextFieldIdentifier.m in Sources */,
 				CDEE1564164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m in Sources */,
 				CDEE1569164ACF0800EDCDF4 /* SearchTextField.m in Sources */,
+				CD5901311663D77B000613F7 /* WindowIndexing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
