@@ -36,6 +36,8 @@
 @synthesize cocoaIdentifierAttribute;
 @synthesize textFieldValue;
 
+@synthesize elementImage;
+
 @synthesize disabled;
 
 
@@ -119,8 +121,8 @@
     // kAXValueAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXValueAttribute];
     self.textFieldValue = attribute ? attribute : @"";
-
-    // kAXValueAttribute
+    
+    // kAXVCocoaIdentifierAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXIdentifierAttribute];
     self.cocoaIdentifierAttribute = attribute ? attribute : @"";
     

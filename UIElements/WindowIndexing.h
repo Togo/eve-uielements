@@ -10,6 +10,6 @@
 
 @interface WindowIndexing : NSObject
 
-- (NSArray*) indexingWindows :(AXUIElementRef) appRef;
+- (NSArray*) indexingWindows :(NSString*) bundleIdentifier;
 
 @end

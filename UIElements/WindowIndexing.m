@@ -14,11 +14,13 @@
 
 @implementation WindowIndexing
 
-- (NSArray*) indexingWindows :(AXUIElementRef) appRef {
-  
-  //Get list of apps
+- (NSArray*) indexingWindows :(NSString*) bundleIdentifier {
   NSMutableArray *allElements = [NSMutableArray array];
-  
+
+    AXUIElementRef appRef = ([UIElementUtilities getAppRefFromBundleIdentifier:bundleIdentifier]);
+
+  if (appRef != nil) {
+    
   //Get list of windows
     CFIndex windowsInApp;
     AXUIElementGetAttributeValueCount(appRef, kAXWindowsAttribute, &windowsInApp);
@@ -35,7 +37,7 @@
         [self indexElements:(__bridge AXUIElementRef)(windowChildren[i]) :allElements];
       }
     }
-  
+  }
   return allElements;
 }
 
@@ -51,35 +53,30 @@
   }
   else {
     UIElement *element = [UIElement createUIElement:ref];
-
+    
     if([element class] != NullUIElement.class) {
-      NSMutableDictionary *tableRow = [NSMutableDictionary dictionary];
       NSString *title = [element title];
       NSString *elementDescription = [element elementDescription];
       NSString *elementHelp = [element help];
-      NSString *roleDescription = [element roleDescription];
-      NSString *role = [element role];
       NSString *textFieldValue = [element textFieldValue];
-      if([title length] > 0
+      
+//      NSLog(@"***********************");
+//      NSLog(@"Description: %@", [element elementDescription]);
+//      NSLog(@"Title: %@", [element title]);
+//      NSLog(@"Help: %@", [element help]);
+//      NSLog(@"roleDescription: %@", [element roleDescription]);
+//      NSLog(@"identifier: %@", [element uiElementIdentifier]);
+//      NSLog(@"TextFieldValue: %@", [element textFieldValue]);
+//      NSLog(@"***********************");
+      
+      if(   [title length] > 0
          || [elementDescription length] > 0
          || [elementHelp length] > 0
-         || [textFieldValue length] > 0) {
+         || ( ([textFieldValue isKindOfClass:[NSString class]]) && [textFieldValue length] > 0) ) {
 
-      [tableRow setValue:textFieldValue forKey:@"text_value"];
-      [tableRow setValue:title forKey:@"element_title"];
-      [tableRow setValue:elementDescription forKey:@"element_description"];
-      [tableRow setValue:elementHelp forKey:@"element_help"];
-      [tableRow setValue:roleDescription forKey:@"role_description"];
-      [tableRow setValue:role forKey:@"role"];
-      [tableRow setValue:element forKey:@"element"];
-      NSLog(@"***********************");
-      NSLog(@"Description: %@", [element elementDescription]);
-      NSLog(@"Title: %@", [element title]);
-      NSLog(@"Help: %@", [element help]);
-      NSLog(@"roleDescription: %@", [element roleDescription]);
-      NSLog(@"identifier: %@", [element uiElementIdentifier]);
-      NSLog(@"***********************");
-      [allElements addObject:tableRow];
+        [element setElementImage:[UIElementUtilities captureUIElement :ref]];
+        
+        [allElements addObject:element];
       }
     }
   }

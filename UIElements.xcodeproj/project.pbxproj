@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4EC80016883CFD00CBD849 /* WindowIndexingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EC7FF16883CFD00CBD849 /* WindowIndexingTests.m */; };
 		CD5901301663D77B000613F7 /* WindowIndexing.h in Headers */ = {isa = PBXBuildFile; fileRef = CD59012E1663D77B000613F7 /* WindowIndexing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5901311663D77B000613F7 /* WindowIndexing.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59012F1663D77B000613F7 /* WindowIndexing.m */; };
 		CD5A46AA16457BEB007B57A5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5A46A916457BEB007B57A5 /* Carbon.framework */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD4EC7FF16883CFD00CBD849 /* WindowIndexingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowIndexingTests.m; sourceTree = "<group>"; };
 		CD59012E1663D77B000613F7 /* WindowIndexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowIndexing.h; sourceTree = "<group>"; };
 		CD59012F1663D77B000613F7 /* WindowIndexing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowIndexing.m; sourceTree = "<group>"; };
 		CD5A46A916457BEB007B57A5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
@@ -234,7 +236,6 @@
 		CDE8B4701633080A0085E130 = {
 			isa = PBXGroup;
 			children = (
-				CD5A46A916457BEB007B57A5 /* Carbon.framework */,
 				CDE8B4841633080A0085E130 /* UIElements */,
 				CDE8B4961633080B0085E130 /* UIElementsTests */,
 				CDE8B47D1633080A0085E130 /* Frameworks */,
@@ -254,6 +255,7 @@
 		CDE8B47D1633080A0085E130 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A46A916457BEB007B57A5 /* Carbon.framework */,
 				CDE8B47E1633080A0085E130 /* Cocoa.framework */,
 				CDE8B4901633080B0085E130 /* SenTestingKit.framework */,
 				CDE8B4801633080A0085E130 /* Other Frameworks */,
@@ -313,6 +315,7 @@
 				CDC8F1FD1637E45D000E9006 /* MenuBarIndexingTests.m */,
 				CDC8F21416380323000E9006 /* LeftMouseClickedObserverTests.h */,
 				CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */,
+				CD4EC7FF16883CFD00CBD849 /* WindowIndexingTests.m */,
 				CDE8B4971633080B0085E130 /* Supporting Files */,
 			);
 			path = UIElementsTests;
@@ -552,6 +555,7 @@
 				CDC8F1D51636679A000E9006 /* ApplicationClassTests.m in Sources */,
 				CDC8F1FE1637E45E000E9006 /* MenuBarIndexingTests.m in Sources */,
 				CDC8F21616380324000E9006 /* LeftMouseClickedObserverTests.m in Sources */,
+				CD4EC80016883CFD00CBD849 /* WindowIndexingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
