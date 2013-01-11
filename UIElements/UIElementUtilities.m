@@ -85,7 +85,7 @@
   
   AXUIElementRef newElement = NULL;
   
-  AXError error = AXUIElementCopyElementAtPosition( appRef, pointAsCGPoint.x, pointAsCGPoint.y, &newElement );
+  AXUIElementCopyElementAtPosition( appRef, pointAsCGPoint.x, pointAsCGPoint.y, &newElement );
   
   return newElement;
 }
@@ -94,6 +94,8 @@
   AXValueRef value;
   NSRect rect;	// dock rect
   
+  if (ref) {
+    
   // get size
   AXUIElementCopyAttributeValue(ref, kAXSizeAttribute, (CFTypeRef *) &value);
   AXValueGetValue(value, kAXValueCGSizeType, (void *) &rect.size);
@@ -118,8 +120,9 @@
   if (image) {
       CGImageRelease(image);
   }
-  
-  return im;
-}
+    return im;
+  }
+  return nil;
+}1
 
 @end
