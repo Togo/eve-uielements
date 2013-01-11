@@ -67,7 +67,62 @@
   } else {
     return string;
   }
-  
 }
+
++ (AXUIElementRef) getAppRefFromBundleIdentifier :bundleIdentifier {
+  NSArray *runningApplications =    [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleIdentifier];
+  
+  if ([runningApplications count] > 0)
+    return (AXUIElementCreateApplication( [[runningApplications objectAtIndex:0] processIdentifier] ));
+  else
+    return nil;
+}
+
++ (AXUIElementRef) getUIElementUnderMousePointer :(NSString*) bundleIdentifier {
+  AXUIElementRef appRef = [self getAppRefFromBundleIdentifier:bundleIdentifier];
+  NSPoint cocoaPoint = [NSEvent mouseLocation];
+  CGPoint pointAsCGPoint = [UIElementUtilities_org carbonScreenPointFromCocoaScreenPoint:cocoaPoint];
+  
+  AXUIElementRef newElement = NULL;
+  
+  AXUIElementCopyElementAtPosition( appRef, pointAsCGPoint.x, pointAsCGPoint.y, &newElement );
+  
+  return newElement;
+}
+
++ (NSImage *) captureUIElement : (AXUIElementRef) ref {
+  AXValueRef value;
+  NSRect rect;	// dock rect
+  
+  if (ref) {
+    
+  // get size
+  AXUIElementCopyAttributeValue(ref, kAXSizeAttribute, (CFTypeRef *) &value);
+  AXValueGetValue(value, kAXValueCGSizeType, (void *) &rect.size);
+  
+  // get position
+  AXUIElementCopyAttributeValue(ref, kAXPositionAttribute, (CFTypeRef *) &value);
+  AXValueGetValue(value, kAXValueCGPointType, (void *) &rect.origin);
+  
+  // get the whole image
+  CGDirectDisplayID displayID = CGMainDisplayID();
+  
+  CGImageRef image = CGDisplayCreateImageForRect(displayID, rect);
+  NSImage *im = [[NSImage alloc] init];
+  if (image != NULL) {
+    NSBitmapImageRep *temp = [[NSBitmapImageRep alloc] initWithCGImage :image];
+    
+    [im addRepresentation:temp];
+  }
+  if (value) {
+      CFRelease(value);
+  }
+  if (image) {
+      CGImageRelease(image);
+  }
+    return im;
+  }
+  return nil;
+}1
 
 @end

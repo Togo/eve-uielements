@@ -36,6 +36,8 @@
 @synthesize cocoaIdentifierAttribute;
 @synthesize textFieldValue;
 
+@synthesize elementImage;
+
 @synthesize disabled;
 
 
@@ -47,9 +49,9 @@
   attribute = [UIElementUtilities readkAXAttributeString:ref :kAXSubroleAttribute];
   NSString *subRole = attribute ? attribute : @"";
   
-  if ([elementRole isEqualToString:(NSString*)kAXButtonRole]
-    || [elementRole isEqualToString:(NSString*)kAXRadioButtonRole]
-    || [elementRole isEqualToString:(NSString*)kAXCheckBoxRole]) {
+  if ([elementRole isEqualToString :(NSString*)kAXButtonRole]
+    || [elementRole isEqualToString :(NSString*)kAXRadioButtonRole]
+    || [elementRole isEqualToString :(NSString*)kAXCheckBoxRole]) {
     return [[Button alloc] initWithUIElementRef:ref];
   }
   else if ([elementRole isEqualToString:(NSString*)kAXMenuItemRole])
@@ -119,8 +121,8 @@
     // kAXValueAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXValueAttribute];
     self.textFieldValue = attribute ? attribute : @"";
-
-    // kAXValueAttribute
+    
+    // kAXVCocoaIdentifierAttribute
     attribute = [UIElementUtilities readkAXAttributeString:ref :kAXIdentifierAttribute];
     self.cocoaIdentifierAttribute = attribute ? attribute : @"";
     

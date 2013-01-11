@@ -13,5 +13,7 @@
 + (NSString*) readkAXAttributeString:(AXUIElementRef)element :(CFStringRef) kAXAttribute;
 + (AXUIElementRef) secondParent :(AXUIElementRef) elementRef;
 + (NSString*) cleanString :(id) string;
-
++ (AXUIElementRef) getAppRefFromBundleIdentifier :bundleIdentifier;
++ (AXUIElementRef) getUIElementUnderMousePointer :(NSString*) bundleIdentifier;
++ (NSImage *) captureUIElement : (AXUIElementRef) ref;
 @end

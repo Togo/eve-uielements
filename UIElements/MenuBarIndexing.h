@@ -15,5 +15,6 @@
 @property NSMutableArray *elements;
 
 - (NSArray*) indexMenuBar :(AXUIElementRef) appRef;
+- (NSArray*) indexMenuBarWithBundleIdentifier :(NSString*) bundleIdentifier;
 - (void) readAllMenuItems :(AXUIElementRef) menuBarItemRef;
 @end

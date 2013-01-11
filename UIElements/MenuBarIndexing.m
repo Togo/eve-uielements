@@ -13,10 +13,39 @@
 
 @synthesize elements;
 
+- (NSArray*) indexMenuBarWithBundleIdentifier :(NSString*) bundleIdentifier {
+  NSMutableArray *allElements = [NSMutableArray array];
+  if (bundleIdentifier == nil) {
+    NSException *nilBundleIdentifier = [NSException
+                                exceptionWithName:@"BundleIdentfierNil"
+                                reason:@"Can't indexing a Menu Bar with a Nil Bundle Identifier"
+                                userInfo:nil];
+    @throw nilBundleIdentifier;
+  } else {
+      AXUIElementRef appRef = [UIElementUtilities getAppRefFromBundleIdentifier:bundleIdentifier];
+      if (appRef != nil) {
+      NSArray *indexedElements = [self indexMenuBar:appRef];
+      for (id aElement in indexedElements) {
+        if (aElement
+            && ([[aElement title] length] > 0)
+            && ([[aElement shortcutString] length] > 0) ) {
+          NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+          [dic setValue:[aElement title] forKey:@"TitleColumn"];
+          [dic setValue:[aElement shortcutString] forKey:@"ShortcutStringColumn"];
+          
+          [allElements addObject:dic];
+        }
+      }
+    }
+  }
+  
+  return allElements;
+}
+
 - (NSArray*) indexMenuBar :(AXUIElementRef) appRef {
   elements = [NSMutableArray array];
   CFTypeRef menuBarRef;
-
+  
   AXUIElementCopyAttributeValue(appRef, kAXMenuBarAttribute, (CFTypeRef*)&menuBarRef);
   
   if (menuBarRef != nil) {
@@ -39,7 +68,7 @@
   
   if (childrenArray.count > 0) {
     for (id oneChildren in childrenArray) {
-      [self readAllMenuItems :(__bridge AXUIElementRef) oneChildren ];
+      [self readAllMenuItems :(__bridge AXUIElementRef) oneChildren];
     }
   }
   else {

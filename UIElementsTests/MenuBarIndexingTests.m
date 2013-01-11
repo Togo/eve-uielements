@@ -41,4 +41,9 @@
   STAssertNotNil([elements objectAtIndex:3], @"Nil Object in MenuBar Array");
 }
 
+- (void) test_indexMenuBarWithBundleIdentifier_bundleIdentifierNil_throwException {
+  MenuBarIndexing *menuBarIndexing = [[MenuBarIndexing alloc] init];
+  STAssertThrows([menuBarIndexing indexMenuBarWithBundleIdentifier:nil], @"");
+}
+
 @end

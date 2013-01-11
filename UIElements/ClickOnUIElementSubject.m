@@ -48,7 +48,7 @@
 // -------------------------------------------------------------------------------
 //	updateCurrentUIElement:
 // -------------------------------------------------------------------------------
-- (void)updateCurrentUIElement
+- (void) updateCurrentUIElement
 {
 //  NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: get called");
   // The current mouse position with origin at top right.

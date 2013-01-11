@@ -54,6 +54,8 @@
 @property (strong, nonatomic) NSString *textFieldValue;
 @property (strong, nonatomic) NSString *cocoaIdentifierAttribute;
 
+@property (strong,nonatomic) NSImage *elementImage;
+
 @property (unsafe_unretained) Boolean disabled;
 
 + (id) createUIElement :(AXUIElementRef) ref;
