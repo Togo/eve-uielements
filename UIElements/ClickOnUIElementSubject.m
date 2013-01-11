@@ -72,15 +72,10 @@
 //    NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: error by AXUIElementCopyElementAtPosition? => :%i:", error);
     if ( error == kAXErrorSuccess
         && newElement
-        && ([self currentUIElement] == NULL || ! CFEqual( [self currentUIElement], newElement ))) {
+        && ([self currentUIElement] == NULL || !CFEqual( [self currentUIElement], newElement ))) {
       
 //      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: set new Element. old -> :%@: <--> new :%@: ", [self currentUIElement], newElement);
-      [self setCurrentUIElement:newElement];
-    }
-    else {
-      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: error by AXUIElementCopyElementAtPosition? => :%i:", error);
-      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: new Element? => :%@:", newElement);
-      NSLog(@"ClickOnUIElementSubject -> updateCurrentUIElement() :: current UIElement || CFEqual? => :%i:", ([self currentUIElement] == NULL || ! CFEqual( [self currentUIElement], newElement )));
+        [self setCurrentUIElement:newElement];
     }
     _lastMousePoint = cocoaPoint;
   }
