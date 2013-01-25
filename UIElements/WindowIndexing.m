@@ -59,6 +59,7 @@
       NSString *elementDescription = [element elementDescription];
       NSString *elementHelp = [element help];
       NSString *textFieldValue = [element textFieldValue];
+      NSString *roleDescription = [element roleDescription];
       
 //      NSLog(@"***********************");
 //      NSLog(@"Description: %@", [element elementDescription]);
@@ -72,6 +73,7 @@
       if(   [title length] > 0
          || [elementDescription length] > 0
          || [elementHelp length] > 0
+         || [roleDescription length] > 0
          || ( ([textFieldValue isKindOfClass:[NSString class]]) && [textFieldValue length] > 0) ) {
 
         [element setElementImage:[UIElementUtilities captureUIElement :ref]];
