@@ -8,9 +8,9 @@
 
 #import "WindowIndexing.h"
 #import "UIElementUtilities.h"
-#import <UIElements/Application.h>
-#import <UIElements/UIElement.h>
-#import <UIElements/NullUIElement.h>
+#import "UIElement.h"
+#import "NullUIElement.h"
+#import "Application.h"
 
 @implementation WindowIndexing
 
