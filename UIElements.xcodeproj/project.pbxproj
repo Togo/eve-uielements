@@ -22,7 +22,7 @@
 		CDC8F0291633EFA5000E9006 /* ButtonIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F0271633EFA5000E9006 /* ButtonIdentifier.m */; };
 		CDC8F03A1633FBAC000E9006 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F0391633FBAC000E9006 /* Button.m */; };
 		CDC8F03B1633FC77000E9006 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F0391633FBAC000E9006 /* Button.m */; };
-		CDC8F03C1633FC81000E9006 /* include/UIElements.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47B1633080A0085E130 /* include/UIElements.dylib */; };
+		CDC8F03C1633FC81000E9006 /* UIElements.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8B47B1633080A0085E130 /* UIElements.dylib */; };
 		CDC8F03E1633FD83000E9006 /* UIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F03D1633FD83000E9006 /* UIElement.m */; };
 		CDC8F04116340CB8000E9006 /* UIElementUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC8F03F16340CB7000E9006 /* UIElementUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDC8F04216340CB8000E9006 /* UIElementUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8F04016340CB7000E9006 /* UIElementUtilities.m */; };
@@ -127,7 +127,7 @@
 		CDC8F22216381BCB000E9006 /* NotificationObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationObserver.h; sourceTree = "<group>"; };
 		CDC8F22C16383AF4000E9006 /* UIElementNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementNotifications.h; sourceTree = "<group>"; };
 		CDC8F22D16383AF4000E9006 /* UIElementNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementNotifications.m; sourceTree = "<group>"; };
-		CDE8B47B1633080A0085E130 /* include/UIElements.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = include/UIElements.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE8B47B1633080A0085E130 /* UIElements.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UIElements.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE8B47E1633080A0085E130 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CDE8B4811633080A0085E130 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CDE8B4821633080A0085E130 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -174,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC8F03C1633FC81000E9006 /* include/UIElements.dylib in Frameworks */,
+				CDC8F03C1633FC81000E9006 /* UIElements.dylib in Frameworks */,
 				CDE8B4911633080B0085E130 /* SenTestingKit.framework in Frameworks */,
 				CDE8B4921633080B0085E130 /* Cocoa.framework in Frameworks */,
 			);
@@ -246,7 +246,7 @@
 		CDE8B47C1633080A0085E130 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDE8B47B1633080A0085E130 /* include/UIElements.dylib */,
+				CDE8B47B1633080A0085E130 /* UIElements.dylib */,
 				CDE8B48F1633080B0085E130 /* UIElementsTests.octest */,
 			);
 			name = Products;
@@ -437,7 +437,7 @@
 			);
 			name = UIElements;
 			productName = UIElements;
-			productReference = CDE8B47B1633080A0085E130 /* include/UIElements.dylib */;
+			productReference = CDE8B47B1633080A0085E130 /* UIElements.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		CDE8B48E1633080B0085E130 /* UIElementsTests */ = {
@@ -648,7 +648,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/UIElements.dylib";
-				PRODUCT_NAME = "include/$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 				SKIP_INSTALL = YES;
 			};
@@ -666,7 +666,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/UIElements.dylib";
-				PRODUCT_NAME = "include/$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 				SKIP_INSTALL = YES;
 			};
