@@ -67,7 +67,7 @@
     }
     
     if ([self withParentTitle]) {
-        [temp appendFormat:@"$$"];
+//        [temp appendFormat:@"$$"];
         [element parentTitle] ? [temp appendString:[element parentTitle]] : [temp appendString:@""];
     }
     

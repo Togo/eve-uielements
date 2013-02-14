@@ -43,6 +43,7 @@
     self.cmdGlyph = (__bridge NSNumber*) cmdGlyphRef;
   }
   
+  
   return self;
 }
 
@@ -55,7 +56,8 @@
   
   if (   [shortcutString isEqualTo:@"Command "]
       || [shortcutString isEqualTo:@"Option "]
-      || [shortcutString isEqualTo:@"Command Option "]) {
+      || [shortcutString isEqualTo:@"Command Option "]
+      || [shortcutString isEqualTo:@"Command Shift "]) {
     [shortcutString setString:@""];
   }
   
