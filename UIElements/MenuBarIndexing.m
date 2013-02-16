@@ -8,6 +8,7 @@
 
 #import "MenuBarIndexing.h"
 #import "MenuItem.h"
+#import "UIElementUtilities_org.h"
 
 @implementation MenuBarIndexing
 

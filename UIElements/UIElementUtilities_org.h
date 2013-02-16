@@ -102,3 +102,4 @@ extern NSString *const UIElementUtilities_orgNoDescription;
 + (NSString *)lineageDescriptionOfUIElement:(AXUIElementRef)element;
 
 @end
+
