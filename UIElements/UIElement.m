@@ -13,6 +13,7 @@
 #import "StaticTextField.h"
 #import "NullUIElement.h"
 #import "SearchTextField.h"
+#import "UIElementUtilities.h"
 
 @implementation UIElement
 
@@ -37,8 +38,6 @@
 @synthesize textFieldValue;
 
 @synthesize elementImage;
-
-@synthesize disabled;
 
 
 + (id) createUIElement :(AXUIElementRef) ref {
@@ -128,10 +127,10 @@
     
     // The Shortcut
     self.shortcut = [[EVEShortcut alloc] initWithUIElementRef:ref];
-    
-    // show message?
-    self.disabled = NO;
-    
+
+	  // Element Dimension (Position and Size)
+	  self.elementDimension = [UIElementUtilities readElementDimension:ref];
+
     return self;
   }
 }
@@ -140,6 +139,12 @@
   [NSException raise:NSInternalInconsistencyException
               format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
   return nil;
+}
+
+- (NSPoint) centralPointOfElementOnScreen {
+	NSRect rect = [self elementDimension];
+	NSPoint centralPoint = NSMakePoint((rect.origin.x + rect.size.width / 2), (rect.origin.y + rect.size.height / 2));
+	return centralPoint;
 }
 
 @end

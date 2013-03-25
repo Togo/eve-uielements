@@ -58,10 +58,10 @@
   MenuItemIdentifier *menuIdentifier = [[MenuItemIdentifier alloc] init];
   
   menuIdentifier.identifierString = [menuIdentifier createIdentifier:element];
-  STAssertEqualObjects(menuIdentifier.identifierString, @"roleroledescriptiontitle$$parenttitle", @"Identifier is wrong");
+  STAssertEqualObjects(menuIdentifier.identifierString, @"roleroledescriptiontitle", @"Identifier is wrong");
   
   STAssertTrue([menuIdentifier withTitle], @"Must return title true");
-  STAssertTrue([menuIdentifier withParentTitle], @"");
+  STAssertFalse([menuIdentifier withParentTitle], @"");
   STAssertFalse([menuIdentifier withDescription], @"Must return title False");
   STAssertFalse([menuIdentifier withHelp], @"Must return false");
   STAssertFalse([menuIdentifier withSubrole], @"Must return false");

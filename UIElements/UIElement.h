@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "EVEShortcut.h"
 #import "EVEIdentifierCreator.h"
-#import "UIElementUtilities.h"
 #import "Application.h"
 
 @class EVEIdentifierCreator;
@@ -28,8 +27,6 @@
   NSString *elementDescription;
   NSString *help;
   NSString *subrole;
-  
-  Boolean disabled;
 }
 
 @property (strong, nonatomic) EVEShortcut *shortcut;
@@ -53,13 +50,15 @@
 @property (strong, nonatomic) NSString *subrole;
 @property (strong, nonatomic) NSString *textFieldValue;
 @property (strong, nonatomic) NSString *cocoaIdentifierAttribute;
+@property(nonatomic) NSRect elementDimension;
 
 @property (strong,nonatomic) NSImage *elementImage;
 
-@property (unsafe_unretained) Boolean disabled;
+
 
 + (id) createUIElement :(AXUIElementRef) ref;
 - (id) initWithUIElementRef :(AXUIElementRef) elementRef;
 - (id) createIdentifier;
 
+- (NSPoint) centralPointOfElementOnScreen;
 @end

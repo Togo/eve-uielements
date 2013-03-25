@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27DCC0BF440A1F491E9D26CA /* TGUIELE_UIElementUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DCCA0C994C9E21F71587F6 /* TGUIELE_UIElementUtilitiesTests.m */; };
+		27DCC1F3F38FAA73CB3C0641 /* TGUIELE_MarqueeRectIndexing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DCC618E01A8D546180C327 /* TGUIELE_MarqueeRectIndexing.h */; };
+		27DCC5611B71AC40E4618AEC /* TGUIELE_MarqueeRectIndexingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DCCA93119BCF426B69B4C8 /* TGUIELE_MarqueeRectIndexingTests.m */; };
+		27DCCC00206031C4EDD0689A /* TGUIELE_MarqueeRectIndexing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DCC531391DDB806F1A4A6C /* TGUIELE_MarqueeRectIndexing.m */; };
 		CD4EC80016883CFD00CBD849 /* WindowIndexingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4EC7FF16883CFD00CBD849 /* WindowIndexingTests.m */; };
 		CD5901301663D77B000613F7 /* WindowIndexing.h in Headers */ = {isa = PBXBuildFile; fileRef = CD59012E1663D77B000613F7 /* WindowIndexing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5901311663D77B000613F7 /* WindowIndexing.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59012F1663D77B000613F7 /* WindowIndexing.m */; };
@@ -71,6 +75,7 @@
 		CDEE1564164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1562164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m */; };
 		CDEE1568164ACF0800EDCDF4 /* SearchTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = CDEE1566164ACF0700EDCDF4 /* SearchTextField.h */; };
 		CDEE1569164ACF0800EDCDF4 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEE1567164ACF0700EDCDF4 /* SearchTextField.m */; };
+		CDFB402216FA5B5300ED964C /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFB401E16FA5B2500ED964C /* OCMock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27DCC1BD98CCE3D53F576EAE /* TGUIELE_MarqueeRectIndexingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGUIELE_MarqueeRectIndexingTests.h; sourceTree = "<group>"; };
+		27DCC531391DDB806F1A4A6C /* TGUIELE_MarqueeRectIndexing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGUIELE_MarqueeRectIndexing.m; sourceTree = "<group>"; };
+		27DCC618E01A8D546180C327 /* TGUIELE_MarqueeRectIndexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGUIELE_MarqueeRectIndexing.h; sourceTree = "<group>"; };
+		27DCCA0C994C9E21F71587F6 /* TGUIELE_UIElementUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGUIELE_UIElementUtilitiesTests.m; sourceTree = "<group>"; };
+		27DCCA93119BCF426B69B4C8 /* TGUIELE_MarqueeRectIndexingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGUIELE_MarqueeRectIndexingTests.m; sourceTree = "<group>"; };
+		27DCCE1F207973C7D754C7BC /* TGUIELE_UIElementUtilitiesTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGUIELE_UIElementUtilitiesTests.h; sourceTree = "<group>"; };
 		CD4EC7FF16883CFD00CBD849 /* WindowIndexingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowIndexingTests.m; sourceTree = "<group>"; };
 		CD59012E1663D77B000613F7 /* WindowIndexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowIndexing.h; sourceTree = "<group>"; };
 		CD59012F1663D77B000613F7 /* WindowIndexing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowIndexing.m; sourceTree = "<group>"; };
@@ -158,6 +169,7 @@
 		CDEE1562164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextFieldIdentifier.m; sourceTree = "<group>"; };
 		CDEE1566164ACF0700EDCDF4 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextField.h; sourceTree = "<group>"; };
 		CDEE1567164ACF0700EDCDF4 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextField.m; sourceTree = "<group>"; };
+		CDFB401E16FA5B2500ED964C /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = ExternalFrameworks/OCMock.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC8F03C1633FC81000E9006 /* UIElements.dylib in Frameworks */,
+				CDFB402216FA5B5300ED964C /* OCMock.framework in Frameworks */,
 				CDE8B4911633080B0085E130 /* SenTestingKit.framework in Frameworks */,
 				CDE8B4921633080B0085E130 /* Cocoa.framework in Frameworks */,
 			);
@@ -192,6 +205,8 @@
 				CDC8F1DB1636782D000E9006 /* MenuBarIndexing.m */,
 				CD59012E1663D77B000613F7 /* WindowIndexing.h */,
 				CD59012F1663D77B000613F7 /* WindowIndexing.m */,
+				27DCC531391DDB806F1A4A6C /* TGUIELE_MarqueeRectIndexing.m */,
+				27DCC618E01A8D546180C327 /* TGUIELE_MarqueeRectIndexing.h */,
 			);
 			name = Indexing;
 			sourceTree = "<group>";
@@ -255,6 +270,7 @@
 		CDE8B47D1633080A0085E130 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDFB401E16FA5B2500ED964C /* OCMock.framework */,
 				CD5A46A916457BEB007B57A5 /* Carbon.framework */,
 				CDE8B47E1633080A0085E130 /* Cocoa.framework */,
 				CDE8B4901633080B0085E130 /* SenTestingKit.framework */,
@@ -317,6 +333,10 @@
 				CDC8F21516380323000E9006 /* LeftMouseClickedObserverTests.m */,
 				CD4EC7FF16883CFD00CBD849 /* WindowIndexingTests.m */,
 				CDE8B4971633080B0085E130 /* Supporting Files */,
+				27DCCE1F207973C7D754C7BC /* TGUIELE_UIElementUtilitiesTests.h */,
+				27DCCA0C994C9E21F71587F6 /* TGUIELE_UIElementUtilitiesTests.m */,
+				27DCC1BD98CCE3D53F576EAE /* TGUIELE_MarqueeRectIndexingTests.h */,
+				27DCCA93119BCF426B69B4C8 /* TGUIELE_MarqueeRectIndexingTests.m */,
 			);
 			path = UIElementsTests;
 			sourceTree = "<group>";
@@ -417,6 +437,7 @@
 				CDEE1563164ACECA00EDCDF4 /* SearchTextFieldIdentifier.h in Headers */,
 				CDEE1568164ACF0800EDCDF4 /* SearchTextField.h in Headers */,
 				CD5901301663D77B000613F7 /* WindowIndexing.h in Headers */,
+				27DCC1F3F38FAA73CB3C0641 /* TGUIELE_MarqueeRectIndexing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +562,7 @@
 				CDEE1564164ACECA00EDCDF4 /* SearchTextFieldIdentifier.m in Sources */,
 				CDEE1569164ACF0800EDCDF4 /* SearchTextField.m in Sources */,
 				CD5901311663D77B000613F7 /* WindowIndexing.m in Sources */,
+				27DCCC00206031C4EDD0689A /* TGUIELE_MarqueeRectIndexing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +578,8 @@
 				CDC8F1FE1637E45E000E9006 /* MenuBarIndexingTests.m in Sources */,
 				CDC8F21616380324000E9006 /* LeftMouseClickedObserverTests.m in Sources */,
 				CD4EC80016883CFD00CBD849 /* WindowIndexingTests.m in Sources */,
+				27DCC0BF440A1F491E9D26CA /* TGUIELE_UIElementUtilitiesTests.m in Sources */,
+				27DCC5611B71AC40E4618AEC /* TGUIELE_MarqueeRectIndexingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,12 +669,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/UIElements\"",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/UIElements.dylib";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -664,12 +690,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/UIElements\"",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/UIElements.dylib";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -679,7 +707,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				INFOPLIST_FILE = "UIElementsTests/UIElementsTests-Info.plist";
@@ -693,7 +724,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/ExternalFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				INFOPLIST_FILE = "UIElementsTests/UIElementsTests-Info.plist";
