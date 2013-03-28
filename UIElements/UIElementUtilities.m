@@ -217,4 +217,26 @@ return [[NullUIElement alloc] init];
 
 	return rect;
 }
+
++ (NSRect)getRectOfFocusedWindowWithBundleIdentifier:(NSString *)bundleIdentifier {
+	AXUIElementRef appRef = [self getAppRefFromBundleIdentifier:bundleIdentifier];
+
+	if (appRef != nil) {
+		CFTypeRef window_ref;
+		if( AXUIElementCopyAttributeValue(appRef, kAXFocusedWindowAttribute, &window_ref) == kAXErrorSuccess ) {
+			AXValueRef value;
+			NSRect rect;
+
+			AXUIElementCopyAttributeValue(window_ref, kAXSizeAttribute, (CFTypeRef *) &value);
+			AXValueGetValue(value, kAXValueCGSizeType, (void *) &rect.size);
+
+			AXUIElementCopyAttributeValue(window_ref, kAXPositionAttribute, (CFTypeRef *) &value);
+			AXValueGetValue(value, kAXValueCGPointType, (void *) &rect.origin);
+
+			return rect;
+		}
+	}
+
+	return NSMakeRect(0, 0, 0, 0);
+}
 @end

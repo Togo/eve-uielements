@@ -24,8 +24,6 @@
 - (void)setUp
 {
 	[super setUp];
-
-	NSValue *inputValue = [NSValue valueWithRect:NSMakeRect(10, 10, 2, 2)];
 	_indexing = [TGUIELE_MarqueeRectIndexing marqueeIndexing];
 }
 

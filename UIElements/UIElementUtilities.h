@@ -21,4 +21,6 @@
 
 + (UIElement *)copyElementAtPoint:(CGFloat)x andPoint:(CGFloat)y applicationReference:(AXUIElementRef)appRef rectToScan:(NSRect)selectedRect;
 + (NSRect)readElementDimension:(AXUIElementRef)ref;
++ (NSRect)getRectOfFocusedWindowWithBundleIdentifier:(NSString *)bundleIdentifier;
+
 @end
