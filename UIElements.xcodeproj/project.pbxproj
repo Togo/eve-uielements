@@ -478,7 +478,7 @@
 			name = UIElementsTests;
 			productName = UIElementsTests;
 			productReference = CDE8B48F1633080B0085E130 /* UIElementsTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -486,7 +486,8 @@
 		CDE8B4721633080A0085E130 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Tobias Sommer";
 			};
 			buildConfigurationList = CDE8B4751633080A0085E130 /* Build configuration list for PBXProject "UIElements" */;
@@ -615,6 +616,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -632,6 +634,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -655,6 +658,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -712,6 +716,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				INFOPLIST_FILE = "UIElementsTests/UIElementsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "togo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -729,6 +734,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIElements/UIElements-Prefix.pch";
 				INFOPLIST_FILE = "UIElementsTests/UIElementsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "togo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

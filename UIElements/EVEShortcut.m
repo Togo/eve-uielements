@@ -201,7 +201,7 @@
   
   if (cmdModifiers != nil) {
 
-    if ( !([cmdModifiers intValue] & kMenuNoCommandModifier) != 0 )
+    if ( !(([cmdModifiers intValue] & kMenuNoCommandModifier) != 0) )
       [cmdModifierString appendString:@"Command "];
   
     if ( ([cmdModifiers intValue] & kMenuOptionModifier) != 0 )
